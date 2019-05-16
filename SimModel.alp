@@ -192,21 +192,24 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 			</TrafficLight>
 			<TrafficLight>
 				<Id>1557847576861</Id>
-				<Name><![CDATA[Pedestrians]]></Name>
+				<Name><![CDATA[secondTraffic]]></Name>
 				<X>990</X><Y>990</Y>
 				<Label><X>0</X><Y>-10</Y></Label>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>true</PresentationFlag>
 				<ShowLabel>true</ShowLabel>
 				<Type>STOP_LINES</Type>
+				<Line>1558045927210</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[10]]></Code>
+					<Code><![CDATA[100]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[15]]></Code>
+					<Code><![CDATA[40]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+				<State>GREEN</State>
 			</TrafficLight>
 			<Variables>
 				<Variable Class="PlainVariable">
@@ -24364,11 +24367,11 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>61.09531424763679</X><Y>-40.5071903567374</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>45.14710357445006</X><Y>-3.1099216016494893</Y></Point>
-						<Point><X>45.14710357445006</X><Y>-3.1099216016494893</Y></Point>
-						<Point><X>55.123462517170424</X><Y>-3.7971349935476155</Y></Point>
-						<Point><X>177.27701871503757</X><Y>-17.940141998914896</Y></Point>
-						<Point><X>167.39654589165218</X><Y>-16.398630796768998</Y></Point>
+						<Point><X>43.15691904255493</X><Y>-2.9728293548167812</Y></Point>
+						<Point><X>43.15691904255493</X><Y>-2.9728293548167812</Y></Point>
+						<Point><X>53.133277985275186</X><Y>-3.6600427467149075</Y></Point>
+						<Point><X>177.26349750551788</X><Y>-17.93804133455899</Y></Point>
+						<Point><X>167.38106042455263</X><Y>-16.409173341314613</Y></Point>
 						<Point><X>61.09531424763679</X><Y>-40.5071903567374</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -24389,11 +24392,11 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-70.27501371784251</X><Y>-45.48726255389113</Y></Point>
 						<Point><X>-2.86108813442047</X><Y>-9.581971336164429</Y></Point>
-						<Point><X>11.029907600207252</X><Y>-17.47888027606757</Y></Point>
-						<Point><X>1.1494347768216358</X><Y>-15.937369073921786</Y></Point>
-						<Point><X>11.029907600207252</X><Y>-17.47888027606757</Y></Point>
-						<Point><X>45.906690749558265</X><Y>-22.920214196068628</Y></Point>
-						<Point><X>45.906690749558265</X><Y>-22.920214196068628</Y></Point>
+						<Point><X>11.079247310828578</X><Y>-17.53220609011055</Y></Point>
+						<Point><X>1.1968102298633312</X><Y>-16.003338096866287</Y></Point>
+						<Point><X>11.079247310828578</X><Y>-17.53220609011055</Y></Point>
+						<Point><X>45.89316954003857</X><Y>-22.91811353171272</Y></Point>
+						<Point><X>45.89316954003857</X><Y>-22.91811353171272</Y></Point>
 						<Point><X>-70.27501371784251</X><Y>-45.48726255389113</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -24403,7 +24406,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<LaneConnector SourceId="1556012043168" TargetId="1556011961468">
 					<Id>1557957944346</Id>
 					<Name><![CDATA[laneConnector13]]></Name>
-					<X>1062.3874621026657</X><Y>484.3005812800069</Y>
+					<X>1062.4280257312248</X><Y>484.294279286939</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24412,14 +24415,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-109.58746210266577</X><Y>19.699418719993105</Y></Point>
+						<Point><X>-109.62802573122485</X><Y>19.705720713060998</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-66.02968905882824</X><Y>10.301683651968574</Y></Point>
-						<Point><X>-66.02968905882824</X><Y>10.301683651968574</Y></Point>
-						<Point><X>-75.91016188221374</X><Y>11.843194854114415</Y></Point>
-						<Point><X>-102.44257820596567</X><Y>-14.597615131977022</Y></Point>
-						<Point><X>-100.29463897251503</X><Y>-4.831021199115696</Y></Point>
-						<Point><X>-109.58746210266577</X><Y>19.699418719993105</Y></Point>
+						<Point><X>-66.21409977338521</X><Y>10.24368958948395</Y></Point>
+						<Point><X>-66.21409977338521</X><Y>10.24368958948395</Y></Point>
+						<Point><X>-76.09653685435023</X><Y>11.772557582728211</Y></Point>
+						<Point><X>-102.48314183452476</X><Y>-14.591313138909129</Y></Point>
+						<Point><X>-100.33520260107412</X><Y>-4.824719206047803</Y></Point>
+						<Point><X>-109.62802573122485</X><Y>19.705720713060998</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -24428,7 +24431,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<LaneConnector SourceId="1556012043168" TargetId="1556012008556">
 					<Id>1557957944347</Id>
 					<Name><![CDATA[laneConnector16]]></Name>
-					<X>1062.3874621026657</X><Y>484.3005812800069</Y>
+					<X>1062.4280257312248</X><Y>484.294279286939</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24437,14 +24440,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-109.58746210266577</X><Y>19.699418719993105</Y></Point>
-						<Point><X>-9.88047282338539</X><Y>1.5415112021457844</Y></Point>
-						<Point><X>-128.47541895230552</X><Y>14.420040886777429</Y></Point>
-						<Point><X>-118.49906000958526</X><Y>13.732827494879302</Y></Point>
-						<Point><X>-128.47541895230552</X><Y>14.420040886777429</Y></Point>
-						<Point><X>-173.6225225267558</X><Y>17.52996248842686</Y></Point>
-						<Point><X>-173.6225225267558</X><Y>17.52996248842686</Y></Point>
-						<Point><X>-109.58746210266577</X><Y>19.699418719993105</Y></Point>
+						<Point><X>-109.62802573122485</X><Y>19.705720713060998</Y></Point>
+						<Point><X>-9.882437080965019</X><Y>1.5288679932443188</Y></Point>
+						<Point><X>-130.5061671127596</X><Y>14.563435126677973</Y></Point>
+						<Point><X>-120.52980817003925</X><Y>13.876221734779847</Y></Point>
+						<Point><X>-130.5061671127596</X><Y>14.563435126677973</Y></Point>
+						<Point><X>-173.6630861553149</X><Y>17.536264481494754</Y></Point>
+						<Point><X>-173.6630861553149</X><Y>17.536264481494754</Y></Point>
+						<Point><X>-109.62802573122485</X><Y>19.705720713060998</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -24453,7 +24456,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<LaneConnector SourceId="1556012043168" TargetId="1556985167430">
 					<Id>1557957944348</Id>
 					<Name><![CDATA[laneConnector17]]></Name>
-					<X>1065.6845832850333</X><Y>505.4338148189147</Y>
+					<X>1065.6981044945528</X><Y>505.43171415455873</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24462,14 +24465,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-112.88458328503339</X><Y>-1.4338148189146978</Y></Point>
+						<Point><X>-112.89810449455285</X><Y>-1.4317141545587333</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-53.326261594459424</X><Y>8.319746543086126</Y></Point>
-						<Point><X>-53.326261594459424</X><Y>8.319746543086126</Y></Point>
-						<Point><X>-63.20673441784493</X><Y>9.861257745232024</Y></Point>
-						<Point><X>-83.59911361633897</X><Y>56.29254697666431</Y></Point>
-						<Point><X>-86.46020175075944</X><Y>46.71057564049977</Y></Point>
-						<Point><X>-112.88458328503339</X><Y>-1.4338148189146978</Y></Point>
+						<Point><X>-53.24325309963638</X><Y>8.237027451156735</Y></Point>
+						<Point><X>-53.24325309963638</X><Y>8.237027451156735</Y></Point>
+						<Point><X>-63.12569018060151</X><Y>9.765895444400996</Y></Point>
+						<Point><X>-83.61263482585844</X><Y>56.294647641020276</Y></Point>
+						<Point><X>-86.4737229602789</X><Y>46.712676304855734</Y></Point>
+						<Point><X>-112.89810449455285</X><Y>-1.4317141545587333</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -24487,14 +24490,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-49.78</X><Y>-51.607</Y></Point>
-						<Point><X>-16.809</X><Y>-18.506</Y></Point>
-						<Point><X>-36.58</X><Y>-40.273</Y></Point>
-						<Point><X>-19.771</X><Y>-21.768</Y></Point>
-						<Point><X>-60.133</X><Y>-48.657</Y></Point>
-						<Point><X>-80.887</X><Y>-56.045</Y></Point>
-						<Point><X>-57.335</X><Y>-47.661</Y></Point>
-						<Point><X>-80.887</X><Y>-56.045</Y></Point>
+						<Point><X>-49.77999999999997</X><Y>-51.60699999999997</Y></Point>
+						<Point><X>-2.8610881344205836</X><Y>-9.581971336164543</Y></Point>
+						<Point><X>-36.58000000000004</X><Y>-40.273000000000025</Y></Point>
+						<Point><X>-19.770999999999958</X><Y>-21.76800000000003</Y></Point>
+						<Point><X>-60.13300000000004</X><Y>-48.65699999999998</Y></Point>
+						<Point><X>-80.88700000000006</X><Y>-56.045000000000016</Y></Point>
+						<Point><X>-57.335000000000036</X><Y>-47.661</Y></Point>
+						<Point><X>-80.88700000000006</X><Y>-56.045000000000016</Y></Point>
 						<Point><X>-113.81530211735856</X><Y>-53.77626840630131</Y></Point>
 						<Point><X>-113.81530211735856</X><Y>-53.77626840630131</Y></Point>
 						<Point><X>-49.78024169326852</X><Y>-51.60681217473507</Y></Point>
@@ -24516,19 +24519,19 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>13.745</X><Y>29.703</Y></Point>
-						<Point><X>17.491</X><Y>17.863</Y></Point>
-						<Point><X>35.611</X><Y>36.369</Y></Point>
-						<Point><X>18.121</X><Y>18.507</Y></Point>
-						<Point><X>53.96</X><Y>53.349</Y></Point>
-						<Point><X>57.945</X><Y>57.036</Y></Point>
-						<Point><X>39.596</X><Y>40.056</Y></Point>
-						<Point><X>82.881</X><Y>58.815</Y></Point>
-						<Point><X>86.376</X><Y>59.064</Y></Point>
-						<Point><X>61.439</X><Y>57.285</Y></Point>
-						<Point><X>86.376</X><Y>59.064</Y></Point>
-						<Point><X>129.92647981598736</X><Y>52.26987884935636</Y></Point>
-						<Point><X>129.92647981598736</X><Y>52.26987884935636</Y></Point>
+						<Point><X>13.745000000000005</X><Y>29.702999999999975</Y></Point>
+						<Point><X>2.147939233450643</X><Y>9.76659393286127</Y></Point>
+						<Point><X>35.61099999999999</X><Y>36.36900000000003</Y></Point>
+						<Point><X>18.12099999999998</X><Y>18.507000000000005</Y></Point>
+						<Point><X>53.960000000000036</X><Y>53.349000000000046</Y></Point>
+						<Point><X>57.94500000000005</X><Y>57.03600000000006</Y></Point>
+						<Point><X>39.596000000000004</X><Y>40.05600000000004</Y></Point>
+						<Point><X>82.88099999999997</X><Y>58.815000000000055</Y></Point>
+						<Point><X>86.37600000000009</X><Y>59.063999999999965</Y></Point>
+						<Point><X>61.438999999999965</X><Y>57.28499999999997</Y></Point>
+						<Point><X>86.37600000000009</X><Y>59.063999999999965</Y></Point>
+						<Point><X>129.91295860646767</X><Y>52.27197951371227</Y></Point>
+						<Point><X>129.91295860646767</X><Y>52.27197951371227</Y></Point>
 						<Point><X>13.744775348586586</X><Y>29.70283049153386</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -24548,17 +24551,17 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-70.275</X><Y>-45.487</Y></Point>
-						<Point><X>-12.768</X><Y>-21.493</Y></Point>
-						<Point><X>-8.408</X><Y>-14.154</Y></Point>
-						<Point><X>4.36</X><Y>7.339</Y></Point>
-						<Point><X>-24.807</X><Y>-33.024</Y></Point>
-						<Point><X>-32.742</X><Y>-42.154</Y></Point>
-						<Point><X>-16.343</X><Y>-23.284</Y></Point>
-						<Point><X>-48.448</X><Y>-61.604</Y></Point>
-						<Point><X>-63.13</X><Y>-79.784</Y></Point>
-						<Point><X>-47.423</X><Y>-60.334</Y></Point>
-						<Point><X>-70.275</X><Y>-45.487</Y></Point>
+						<Point><X>-70.27499999999998</X><Y>-45.48700000000002</Y></Point>
+						<Point><X>-5.821719538569141</X><Y>-19.497319594824944</Y></Point>
+						<Point><X>-8.408000000000015</X><Y>-14.153999999999996</Y></Point>
+						<Point><X>4.3599999999999</X><Y>7.3390000000000555</Y></Point>
+						<Point><X>-24.807000000000016</X><Y>-33.024</Y></Point>
+						<Point><X>-32.74199999999996</X><Y>-42.153999999999996</Y></Point>
+						<Point><X>-16.34299999999996</X><Y>-23.283999999999992</Y></Point>
+						<Point><X>-48.44799999999998</X><Y>-61.603999999999985</Y></Point>
+						<Point><X>-63.13012982114242</X><Y>-79.78429640586126</Y></Point>
+						<Point><X>-58.759520033698095</X><Y>-59.91130820945756</Y></Point>
+						<Point><X>-70.27499999999998</X><Y>-45.48700000000002</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -24577,14 +24580,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>34.634</X><Y>25.109</Y></Point>
-						<Point><X>16.725</X><Y>18.582</Y></Point>
-						<Point><X>47.501</X><Y>52.775</Y></Point>
-						<Point><X>30.776</X><Y>34.194</Y></Point>
-						<Point><X>59.485</X><Y>74.716</Y></Point>
-						<Point><X>63.92</X><Y>82.835</Y></Point>
-						<Point><X>51.936</X><Y>60.895</Y></Point>
-						<Point><X>34.634</X><Y>25.109</Y></Point>
+						<Point><X>34.634000000000015</X><Y>25.10899999999998</Y></Point>
+						<Point><X>4.49476791976349</X><Y>20.437530266747103</Y></Point>
+						<Point><X>47.500999999999976</X><Y>52.775000000000034</Y></Point>
+						<Point><X>30.775999999999954</X><Y>34.19400000000002</Y></Point>
+						<Point><X>59.485000000000014</X><Y>74.71599999999995</Y></Point>
+						<Point><X>63.919904262567684</X><Y>82.83498892667666</Y></Point>
+						<Point><X>57.932804179875916</X><Y>62.783799070297334</Y></Point>
+						<Point><X>34.634000000000015</X><Y>25.10899999999998</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -24743,7 +24746,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<Road TargetId="1556011953968">
 					<Id>1556012043168</Id>
 					<Name><![CDATA[roadE]]></Name>
-					<X>1754.641143876217</X><Y>408.7694315883686</Y>
+					<X>1843.000143876217</X><Y>396.0004315883686</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24761,24 +24764,24 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<BackwardLanesCount>1</BackwardLanesCount>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>24.703</X><Y>-3.844</Y><Z>0</Z></Point>
-						<Point><X>-24.701</X><Y>3.854</Y><Z>0</Z></Point>
-						<Point><X>-687.308</X><Y>107.231</Y><Z>0</Z></Point>
-						<Point><X>-662.607</X><Y>103.377</Y><Z>0</Z></Point>
-						<Point><X>97.692</X><Y>-14.769</Y><Z>0</Z></Point>
+						<Point><X>24.703000000000003</X><Y>-3.8439999999999994</Y><Z>0</Z></Point>
+						<Point><X>-24.705999999999996</X><Y>3.822000000000001</Y><Z>0</Z></Point>
+						<Point><X>-775.667</X><Y>120</Y><Z>0</Z></Point>
+						<Point><X>-750.961</X><Y>116.17800000000001</Y><Z>0</Z></Point>
+						<Point><X>9.332999999999998</X><Y>-2</Y><Z>0</Z></Point>
 					</Points>
 
 			<Shapes>
 				<RoadStopline>
 					<Id>1556012055137</Id>
 					<Name><![CDATA[stopLine3]]></Name>
-					<X>1113.69</X><Y>465.317</Y>
+					<X>1114.628</X><Y>465.86</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>642.007</Offset>
+					<Offset>730.49</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -24795,13 +24798,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1557174726580</Id>
 					<Name><![CDATA[stopLine13]]></Name>
-					<X>1105.162</X><Y>466.959</Y>
+					<X>1102.677</X><Y>464.342</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>650.686</Offset>
+					<Offset>742.068</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -24817,13 +24820,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1557177440783</Id>
 					<Name><![CDATA[stopLine14]]></Name>
-					<X>1078.575</X><Y>536.544</Y>
+					<X>1074.604</X><Y>537.138</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>687.682</Offset>
+					<Offset>780.941</Offset>
 					<OnForwardSide>false</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -24839,13 +24842,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558003747460</Id>
 					<Name><![CDATA[stopLine24]]></Name>
-					<X>1062.716</X><Y>473.582</Y>
+					<X>1062.469</X><Y>470.275</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>693.646</Offset>
+					<Offset>782.711</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>1</RightLane>
@@ -24861,14 +24864,36 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558040586976</Id>
 					<Name><![CDATA[stopLine25]]></Name>
-					<X>1062.726</X><Y>472.415</Y>
+					<X>1062.656</X><Y>470.246</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>693.456</Offset>
+					<Offset>782.521</Offset>
 					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+				</RoadStopline>
+
+				<RoadStopline>
+					<Id>1558045927210</Id>
+					<Name><![CDATA[stopLine27]]></Name>
+					<X>1842.937</X><Y>417.805</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>3.396</Offset>
+					<OnForwardSide>false</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
