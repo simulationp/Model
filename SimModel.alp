@@ -136,11 +136,12 @@ secondTraffic.turnOn(5);]]></StartupCode>
 				<Line>1556013130109</Line>
 				<Line>1556013220244</Line>
 				<Line>1556013235190</Line>
-				<Line>1558003726229</Line>
 				<Line>1558003739318</Line>
 				<Line>1558003747460</Line>
 				<Line>1556011982977</Line>
 				<Line>1558040586976</Line>
+				<Line>1558279028417</Line>
+				<Line>1558279056557</Line>
 				<Duration Class="CodeValue">
 					<Code><![CDATA[120]]></Code>
 				</Duration>
@@ -163,14 +164,16 @@ secondTraffic.turnOn(5);]]></StartupCode>
 				<State>GREEN</State>
 				<State>RED</State>
 				<State>GREEN</State>
-				<State>GREEN</State>
-				<State>RED</State>
 				<State>RED</State>
 				<State>GREEN</State>
 				<State>GREEN</State>
 				<State>RED</State>
 				<State>RED</State>
 				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>RED</State>
 				<State>GREEN</State>
 				<State>RED</State>
 				<OnPhaseChange Class="CodeValue">
@@ -188,6 +191,7 @@ AreaSWE.setOpen(currentPhaseIndex == 0);
 bikeArea2.setOpen(currentPhaseIndex == 0);
 bikeArea6.setOpen(currentPhaseIndex == 0);
 
+if currentPhaseIndex==0()
 ]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
@@ -216,7 +220,7 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 				<Variable Class="PlainVariable">
 					<Id>1557956837928</Id>
 					<Name><![CDATA[Time]]></Name>
-					<X>600</X><Y>60</Y>
+					<X>500</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -226,6 +230,54 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[0]]></Code>
 						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1558276600283</Id>
+					<Name><![CDATA[totalNumberOfCars]]></Name>
+					<X>710</X><Y>1960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1558276722597</Id>
+					<Name><![CDATA[queueLength_westIL]]></Name>
+					<X>710</X><Y>2090</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1558276781192</Id>
+					<Name><![CDATA[queueLength_westOL]]></Name>
+					<X>710</X><Y>2040</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1558277312513</Id>
+					<Name><![CDATA[carsInnerNode]]></Name>
+					<X>940</X><Y>1960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 			</Variables>
@@ -4363,6 +4415,37 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[Time+=1]]></Action>
+				</Event>
+				<Event>
+					<Id>1558277429036</Id>
+					<Name><![CDATA[getCarsInnernode]]></Name>
+					<X>1140</X><Y>1960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1558339200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[30]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[carsInnerNode = intersection.getCars().size();]]></Action>
 				</Event>
 			</Events>
 			<CustomDistributions>
@@ -8799,6 +8882,9 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -9192,6 +9278,9 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -9563,6 +9652,9 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -10137,6 +10229,10 @@ bikeArea6.setOpen(currentPhaseIndex == 0);
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;
+queueLength_westOL += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -10662,6 +10758,9 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -11622,6 +11721,9 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -11842,6 +11944,9 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -12062,6 +12167,9 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -12273,6 +12381,9 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -26728,6 +26839,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -26951,6 +27065,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -27171,6 +27288,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -27394,6 +27514,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -27614,6 +27737,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -27834,6 +27960,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[totalNumberOfCars += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -28435,13 +28564,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558003726229</Id>
 					<Name><![CDATA[stopLine22]]></Name>
-					<X>894.586</X><Y>556.508</Y>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>881.553</X><Y>551.748</Y>
 					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>634.097</Offset>
+					<Offset>623.0</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -28453,6 +28583,59 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[queueLength_westOL =-1]]></Code>
+					</OnCarPassedAction>
+				</RoadStopline>
+
+				<RoadStopline>
+					<Id>1558279028417</Id>
+					<Name><![CDATA[stopLine28]]></Name>
+					<X>1170.167</X><Y>1122.777</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>634.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[queueLength_westOL =-1]]></Code>
+					</OnCarPassedAction>
+				</RoadStopline>
+
+				<RoadStopline>
+					<Id>1558279056557</Id>
+					<Name><![CDATA[stopLine29]]></Name>
+					<X>1169.367</X><Y>1116.444</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>634.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>1</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[queueLength_westIL =-1]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 			</Shapes>
@@ -31394,6 +31577,49 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
+				<Rectangle>
+					<Id>1558276096026</Id>
+					<Name><![CDATA[rectangle10]]></Name>
+					<X>660</X><Y>1880</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>760</Width>
+					<Height>390</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1558276102931</Id>
+					<Name><![CDATA[text10]]></Name>
+					<X>680</X><Y>1890</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Validation data collection]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>20</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Controls>
 				<Control Type="Window3D">
@@ -32493,7 +32719,49 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<FinalDate><![CDATA[1558569600000]]></FinalDate>	
 				<FinalTime><![CDATA[100.0]]></FinalTime>	
 			</ModelTimeProperties>
-		</SimulationExperiment>	
+		</SimulationExperiment>
+		<!--   =========  Parameter Variation Experiment   ========  -->
+		<ParamVariationExperiment ActiveObjectClassId="1556011494852">
+			<Id>1558274476208</Id>
+			<Name><![CDATA[Validation]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+
+
+			<AllowParallelEvaluations>true</AllowParallelEvaluations>
+			<UseFreeformParameters>false</UseFreeformParameters>
+			<NumberOfRuns>10</NumberOfRuns>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Stop at specified time]]></StopOption>
+				<InitialDate><![CDATA[1555977600000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1558569600000]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
+			</ModelTimeProperties>
+			<PresentationProperties>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<Title><![CDATA[SimModel : ParametersVariation]]></Title>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			</PresentationProperties>
+			<ReplicationsProperties>
+				<UseReplication>false</UseReplication>
+				<FixedReplicationsNumber>true</FixedReplicationsNumber>
+				<ReplicationPerIteration>10</ReplicationPerIteration>
+				<MinimumReplication>2</MinimumReplication>
+				<MaximumReplication>10</MaximumReplication>
+				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>
+				<ErrorPercent>0.5</ErrorPercent>
+				<ExpressionForConfidenceComputation><![CDATA[0]]></ExpressionForConfidenceComputation>
+			</ReplicationsProperties>
+		</ParamVariationExperiment>	
 	</Experiments>
 	<ModelResources>
 		<Resource>
