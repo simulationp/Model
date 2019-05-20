@@ -453,14 +453,14 @@ secondTraffic.turnOn(5);]]></StartupCode>
 AreaENS.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
 AreaWSN.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhaseIndex == 12);
 AreaWNS.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhaseIndex == 12);
-bikeArea4.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
-
 AreaEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
 AreaWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
 AreaSEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
 AreaSWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
-bikeArea2.setOpen(currentPhaseIndex == 0);
-bikeArea6.setOpen(currentPhaseIndex == 0);
+
+bikeArea2.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
+bikeArea6.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
+bikeArea4.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
 bikeArea8.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5 || currentPhaseIndex == 6);]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
