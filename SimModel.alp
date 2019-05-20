@@ -130,69 +130,338 @@ secondTraffic.turnOn(5);]]></StartupCode>
 				<Type>STOP_LINES</Type>
 				<Junction>1556011953968</Junction>
 				<Line>1556012055137</Line>
+				<Line>1558003747460</Line>
+				<Line>1558040586976</Line>
 				<Line>1556012747256</Line>
 				<Line>1556012763743</Line>
+				<Line>1558279028417</Line>
+				<Line>1558279056557</Line>
 				<Line>1556013119455</Line>
 				<Line>1556013130109</Line>
 				<Line>1556013220244</Line>
 				<Line>1556013235190</Line>
 				<Line>1558003739318</Line>
-				<Line>1558003747460</Line>
 				<Line>1556011982977</Line>
-				<Line>1558040586976</Line>
-				<Line>1558279028417</Line>
-				<Line>1558279056557</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[120]]></Code>
+					<Code><![CDATA[2]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[43]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[5]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[6]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[11]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[4]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[6]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>GREEN</State>
-				<State>RED</State>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
 				<State>RED</State>
 				<State>GREEN</State>
 				<State>GREEN</State>
-				<State>RED</State>
+				<State>GREEN</State>
 				<State>GREEN</State>
 				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
 				<State>GREEN</State>
 				<State>RED</State>
 				<OnPhaseChange Class="CodeValue">
-					<Code><![CDATA[AreaESN.setOpen(currentPhaseIndex == 1);
-AreaENS.setOpen(currentPhaseIndex == 1);
-AreaWSN.setOpen(currentPhaseIndex == 1);
-AreaWNS.setOpen(currentPhaseIndex == 1);
-bikeArea4.setOpen(currentPhaseIndex == 1);
-bikeArea8.setOpen(currentPhaseIndex == 1);
+					<Code><![CDATA[AreaESN.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
+AreaENS.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
+AreaWSN.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhaseIndex == 12);
+AreaWNS.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhaseIndex == 12);
+bikeArea4.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
 
-AreaEW.setOpen(currentPhaseIndex == 0);
-AreaWE.setOpen(currentPhaseIndex == 0);
-AreaSEW.setOpen(currentPhaseIndex == 0);
-AreaSWE.setOpen(currentPhaseIndex == 0);
+AreaEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
+AreaWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
+AreaSEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
+AreaSWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
 bikeArea2.setOpen(currentPhaseIndex == 0);
 bikeArea6.setOpen(currentPhaseIndex == 0);
-
-if currentPhaseIndex==0()
-]]></Code>
+bikeArea8.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5 || currentPhaseIndex == 6);]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
 			<TrafficLight>
@@ -13164,7 +13433,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[22]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -14196,7 +14465,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[14]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -15058,7 +15327,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[9]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -16603,7 +16872,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[26]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -17726,7 +17995,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[4]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -18358,7 +18627,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[29]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -19489,7 +19758,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[18]]></Code>
+								<Code><![CDATA[10]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -20837,7 +21106,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[85]]></Code>
+								<Code><![CDATA[31]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -21534,7 +21803,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[85]]></Code>
+								<Code><![CDATA[121]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -22168,7 +22437,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[85]]></Code>
+								<Code><![CDATA[45]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -22802,7 +23071,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[85]]></Code>
+								<Code><![CDATA[22]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -24987,7 +25256,7 @@ stopLine20.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[50]]></Code>
+								<Code><![CDATA[20]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -28609,7 +28878,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
 					<OnCarPassedAction Class="CodeValue">
-						<Code><![CDATA[queueLength_westOL =-1]]></Code>
+						<Code><![CDATA[queueLength_westOL =-1;]]></Code>
 					</OnCarPassedAction>
 				</RoadStopline>
 
@@ -28634,7 +28903,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
 					<OnCarPassedAction Class="CodeValue">
-						<Code><![CDATA[queueLength_westIL =-1]]></Code>
+						<Code><![CDATA[queueLength_westIL =-1;]]></Code>
 					</OnCarPassedAction>
 				</RoadStopline>
 
