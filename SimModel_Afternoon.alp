@@ -407,10 +407,10 @@ AreaWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
 AreaSEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
 AreaSWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
 
-South1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
+South1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3);
 North1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
-East1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
-West1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3);]]></Code>
+East1.setOpen(currentPhaseIndex == 8 || currentPhaseIndex == 9 || currentPhaseIndex == 10 || currentPhaseIndex == 11);
+West1.setOpen(currentPhaseIndex == 7 || currentPhaseIndex == 8 || currentPhaseIndex == 9 || currentPhaseIndex == 10);]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
 			<TrafficLight>
@@ -31386,7 +31386,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>6.878</Width>
+					<Width>8</Width>
 					<Height>20</Height>
 					<Rotation>352.3</Rotation>
 				</RectangleArea>
@@ -31403,7 +31403,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16744448</LineColor>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>-1</Y></Point>
+						<Point><X>5.967</X><Y>-1.033</Y></Point>
 					</Points>
 				</TargetLine>
 				<RectangleArea>
@@ -31488,7 +31488,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16744448</LineColor>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>1.667</X><Y>9.333</Y></Point>
+						<Point><X>1.467</X><Y>8.333</Y></Point>
 					</Points>
 				</TargetLine>
 				<RectangleArea>
@@ -31600,7 +31600,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557750384587</Id>
 					<Name><![CDATA[area20]]></Name>
-					<X>878.89</X><Y>490.941</Y>
+					<X>878.507</X><Y>490.966</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31630,7 +31630,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>6.108</Width>
+					<Width>6.492</Width>
 					<Height>21.069</Height>
 					<Rotation>356.2</Rotation>
 				</RectangleArea>
@@ -31674,7 +31674,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557750635466</Id>
 					<Name><![CDATA[targetLine23]]></Name>
-					<X>981</X><Y>451.25</Y>
+					<X>981.2</X><Y>451.79999999999995</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31684,13 +31684,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16744448</LineColor>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>2.5</X><Y>9.75</Y></Point>
+						<Point><X>2.3</X><Y>9.200000000000003</Y></Point>
 					</Points>
 				</TargetLine>
 				<RectangleArea>
 					<Id>1557750650699</Id>
 					<Name><![CDATA[area22]]></Name>
-					<X>947.153</X><Y>457.676</Y>
+					<X>946.929</X><Y>456.349</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31721,7 +31721,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Slope>
 
 					<Width>30.361</Width>
-					<Height>9.951</Height>
+					<Height>11.297</Height>
 					<Rotation>350.4</Rotation>
 				</RectangleArea>
 				<RectangleArea>

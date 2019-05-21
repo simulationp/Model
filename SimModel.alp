@@ -458,10 +458,10 @@ AreaWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
 AreaSEW.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
 AreaSWE.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
 
-South1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5);
-North1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1);
-East1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
-West1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5 || currentPhaseIndex == 6);]]></Code>
+South1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2 || currentPhaseIndex == 3 || currentPhaseIndex == 4 || currentPhaseIndex == 5 || currentPhaseIndex == 6);
+North1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIndex == 2);
+East1.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
+West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhaseIndex == 12);]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
 			<TrafficLight>
@@ -8931,6 +8931,11 @@ West1.setOpen(currentPhaseIndex == 0 || currentPhaseIndex == 1 || currentPhaseIn
 							</ValueColumnReference>
 					</IntervalsQuery>
 					<Intervals>
+						<Interval>
+							<Start>840000</Start>
+							<End>840000</End>
+							<Value>1</Value>
+						</Interval>
 					</Intervals>
 					<Exceptions>
 					</Exceptions>
@@ -30714,7 +30719,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>6.878</Width>
+					<Width>8</Width>
 					<Height>20</Height>
 					<Rotation>352.3</Rotation>
 				</RectangleArea>
@@ -30731,7 +30736,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16744448</LineColor>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>-1</Y></Point>
+						<Point><X>6.167</X><Y>-0.833</Y></Point>
 					</Points>
 				</TargetLine>
 				<RectangleArea>
@@ -30816,7 +30821,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16744448</LineColor>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>1.667</X><Y>9.333</Y></Point>
+						<Point><X>1.667</X><Y>7.333</Y></Point>
 					</Points>
 				</TargetLine>
 				<RectangleArea>
@@ -30928,7 +30933,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557750384587</Id>
 					<Name><![CDATA[area20]]></Name>
-					<X>878.89</X><Y>490.941</Y>
+					<X>878.059</X><Y>490.996</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30958,7 +30963,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>6.108</Width>
+					<Width>6.941</Width>
 					<Height>21.069</Height>
 					<Rotation>356.2</Rotation>
 				</RectangleArea>
@@ -31018,7 +31023,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557750650699</Id>
 					<Name><![CDATA[area22]]></Name>
-					<X>947.153</X><Y>457.676</Y>
+					<X>946.829</X><Y>455.761</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31049,7 +31054,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Slope>
 
 					<Width>30.361</Width>
-					<Height>9.951</Height>
+					<Height>11.893</Height>
 					<Rotation>350.4</Rotation>
 				</RectangleArea>
 				<RectangleArea>
@@ -32055,11 +32060,11 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 			</Shapes>
 			<Controls>
 				<Control Type="Window3D">
-					<Id>1556017941593</Id>
+					<Id>1558458821061</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>1370</X><Y>944</Y>
-					<Width>500</Width>
-					<Height>300</Height>
+					<X>1400</X><Y>940</Y>
+					<Width>520</Width>
+					<Height>380</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ShowLabel>false</ShowLabel>
