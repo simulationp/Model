@@ -1235,7 +1235,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[simmodel]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carToSoutht]]></ItemName>
+						<ItemName><![CDATA[carToSouth1]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -3206,7 +3206,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[simmodel]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carToSoutht]]></ItemName>
+						<ItemName><![CDATA[carToSouth1]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -11166,7 +11166,7 @@ Truck.class
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1556016624076</Id>
-					<Name><![CDATA[carToSoutht]]></Name>
+					<Name><![CDATA[carToSouth1]]></Name>
 					<X>67.666</X><Y>1770.399</Y>
 					<Label><X>-9.666</X><Y>-8.399</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -13326,7 +13326,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaENS.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaENS.size() == 0 && East2.size() == 0){
 	stopLine13.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -14039,7 +14039,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaENS2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaENS2.size() == 0 && East1.size() == 0){
 	stopLine14.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -14251,7 +14251,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWNS2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWNS2.size() == 0 && West2.size() == 0){
 	stopLine2.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -14358,7 +14358,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWNS.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWNS.size() == 0 && West1.size() == 0){
 	stopLine15.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -15113,7 +15113,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaESN2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaESN2.size() == 0 && East2.size() == 0){
 	stopLine13.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -15220,7 +15220,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaESN.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaESN.size() == 0 && East1.size() == 0){
 	stopLine14.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -16038,7 +16038,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWSN2.size() == 0) {
+								<Code><![CDATA[if (self.size() == 0 && AreaWSN2.size() == 0 && West1.size() == 0) {
 stopLine15.setSignal(SIGNAL_GREEN);}
 ]]></Code>
 							</Value>
@@ -16145,7 +16145,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWSN.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWSN.size() == 0 && West2.size() == 0){
 	stopLine2.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -17102,7 +17102,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaEW2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaEW2.size() == 0 && North2.size() == 0){
 	stopLine.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -17209,7 +17209,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaEW.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaEW.size() == 0 && North1.size() == 0){
 	stopLine16.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -17316,7 +17316,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWE2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWE2.size() == 0 && North1.size() == 0){
 	stopLine16.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -17423,7 +17423,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWE.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWE.size() == 0 && North2.size() == 0){
 	stopLine.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -18861,7 +18861,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSEW1.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSEW1.size() == 0 && South1.size() == 0){
 	stopLine19.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -18969,7 +18969,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSEW.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSEW.size() == 0 && South2.size() == 0){
 	stopLine18.setSignal(SIGNAL_GREEN);
 	stopLine17.setSignal(SIGNAL_GREEN);
 	}]]></Code>
@@ -19078,7 +19078,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSWE1.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSWE1.size() == 0 && South2.size() == 0){
 	stopLine18.setSignal(SIGNAL_GREEN);
 	stopLine17.setSignal(SIGNAL_GREEN);
 	}]]></Code>
@@ -19186,7 +19186,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSWE.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSWE.size() == 0 && South1.size() == 0){
 	stopLine19.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26023,7 +26023,7 @@ stopLine20.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSEW1.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSEW1.size() == 0 && AreaSWE.size() == 0){
 	stopLine19.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26131,7 +26131,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaSEW.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaSEW.size() == 0 && AreaSWE1.size() == 0){
 	stopLine18.setSignal(SIGNAL_GREEN);
 	stopLine17.setSignal(SIGNAL_GREEN);
 	}]]></Code>
@@ -26239,7 +26239,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaENS2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaENS2.size() == 0 && AreaESN.size() == 0){
 	stopLine14.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26346,7 +26346,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaENS.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaENS.size() == 0 && AreaESN2.size() == 0){
 	stopLine13.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26453,7 +26453,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaEW.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaEW.size() == 0 && AreaWE2.size() == 0){
 	stopLine16.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26560,7 +26560,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaEW2.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaEW2.size() == 0 && AreaWE.size() == 0){
 	stopLine.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -26667,7 +26667,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWSN2.size() == 0) {
+								<Code><![CDATA[if (self.size() == 0 && AreaWSN2.size() == 0 && AreaWNS.size() == 0) {
 stopLine15.setSignal(SIGNAL_GREEN);}
 ]]></Code>
 							</Value>
@@ -26774,7 +26774,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if (self.size() == 0 && AreaWSN.size() == 0){
+								<Code><![CDATA[if (self.size() == 0 && AreaWSN.size() == 0 && AreaWNS2.size() == 0){
 	stopLine2.setSignal(SIGNAL_GREEN);
 	}]]></Code>
 							</Value>
@@ -28879,13 +28879,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558279028417</Id>
 					<Name><![CDATA[stopLine28]]></Name>
-					<X>904.063</X><Y>559.241</Y>
+					<X>891.146</X><Y>550.909</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>760.048</Offset>
+					<Offset>759.05</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -28904,13 +28904,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558279056557</Id>
 					<Name><![CDATA[stopLine29]]></Name>
-					<X>914.73</X><Y>558.241</Y>
+					<X>891.146</X><Y>550.909</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>760.048</Offset>
+					<Offset>759.05</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>1</RightLane>
@@ -29613,13 +29613,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1556011982977</Id>
 					<Name><![CDATA[stopLine1]]></Name>
-					<X>1034.266</X><Y>550.667</Y>
+					<X>1031.754</X><Y>555.127</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>151.595</Offset>
+					<Offset>148.04</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -29947,7 +29947,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557513671837</Id>
 					<Name><![CDATA[targetLine5]]></Name>
-					<X>1093.167</X><Y>557.333</Y>
+					<X>1092.667</X><Y>559</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30037,7 +30037,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557519852441</Id>
 					<Name><![CDATA[targetLine2]]></Name>
-					<X>860.666</X><Y>473.334</Y>
+					<X>860.466</X><Y>466.334</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30069,7 +30069,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557519948261</Id>
 					<Name><![CDATA[targetLine6]]></Name>
-					<X>862</X><Y>560.75</Y>
+					<X>862</X><Y>564.75</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30085,7 +30085,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557519960335</Id>
 					<Name><![CDATA[targetLine7]]></Name>
-					<X>868.5</X><Y>488.5</Y>
+					<X>867.5</X><Y>478.5</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30101,7 +30101,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557519980699</Id>
 					<Name><![CDATA[area2]]></Name>
-					<X>867.997</X><Y>493.001</Y>
+					<X>867.393</X><Y>484.783</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30132,7 +30132,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Slope>
 
 					<Width>8.782</Width>
-					<Height>19</Height>
+					<Height>27.24</Height>
 					<Rotation>355.8</Rotation>
 				</RectangleArea>
 				<RectangleArea>
@@ -30206,7 +30206,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Slope>
 
 					<Width>8.041</Width>
-					<Height>41.279</Height>
+					<Height>42.908</Height>
 					<Rotation>357.0</Rotation>
 				</RectangleArea>
 				<RectangleArea>
@@ -30297,7 +30297,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557521182875</Id>
 					<Name><![CDATA[targetLine11]]></Name>
-					<X>970</X><Y>439</Y>
+					<X>976</X><Y>436.6</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30454,7 +30454,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>23.138</Width>
+					<Width>27.77</Width>
 					<Height>14.554</Height>
 					<Rotation>353.0</Rotation>
 				</RectangleArea>
@@ -30493,7 +30493,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557527492593</Id>
 					<Name><![CDATA[targetLine14]]></Name>
-					<X>974.167</X><Y>583.833</Y>
+					<X>967.167</X><Y>583.833</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30509,7 +30509,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557527512109</Id>
 					<Name><![CDATA[area12]]></Name>
-					<X>978.667</X><Y>581.833</Y>
+					<X>973.994</X><Y>582.573</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30539,7 +30539,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>22</Width>
+					<Width>26.731</Width>
 					<Height>9.779</Height>
 					<Rotation>351.0</Rotation>
 				</RectangleArea>
@@ -30689,7 +30689,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557748516694</Id>
 					<Name><![CDATA[area16]]></Name>
-					<X>1078.07</X><Y>515.585</Y>
+					<X>1076.729</X><Y>515.766</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30719,14 +30719,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>8</Width>
-					<Height>20</Height>
+					<Width>9.353</Width>
+					<Height>23.427</Height>
 					<Rotation>352.3</Rotation>
 				</RectangleArea>
 				<TargetLine>
 					<Id>1557748590540</Id>
 					<Name><![CDATA[targetLine17]]></Name>
-					<X>1081.833</X><Y>540.833</Y>
+					<X>1084</X><Y>544.499</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30811,7 +30811,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557749806878</Id>
 					<Name><![CDATA[targetLine20]]></Name>
-					<X>965.333</X><Y>571.667</Y>
+					<X>962.133</X><Y>573.267</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30827,7 +30827,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557749831895</Id>
 					<Name><![CDATA[area18]]></Name>
-					<X>973</X><Y>570</Y>
+					<X>967.708</X><Y>571.349</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30857,8 +30857,8 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>21.185</Width>
-					<Height>9</Height>
+					<Width>26.646</Width>
+					<Height>9.895</Height>
 					<Rotation>345.7</Rotation>
 				</RectangleArea>
 				<RectangleArea>
@@ -30917,7 +30917,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557750347092</Id>
 					<Name><![CDATA[targetLine22]]></Name>
-					<X>878.25</X><Y>485.25</Y>
+					<X>878.25</X><Y>475.25</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30933,7 +30933,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RectangleArea>
 					<Id>1557750384587</Id>
 					<Name><![CDATA[area20]]></Name>
-					<X>878.059</X><Y>490.996</Y>
+					<X>877.383</X><Y>480.813</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30963,8 +30963,8 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>6.941</Width>
-					<Height>21.069</Height>
+					<Width>9.163</Width>
+					<Height>31.274</Height>
 					<Rotation>356.2</Rotation>
 				</RectangleArea>
 				<RectangleArea>
@@ -31007,7 +31007,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<TargetLine>
 					<Id>1557750635466</Id>
 					<Name><![CDATA[targetLine23]]></Name>
-					<X>981</X><Y>451.25</Y>
+					<X>982.8</X><Y>449.25</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -31053,7 +31053,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>30.361</Width>
+					<Width>31.778</Width>
 					<Height>11.893</Height>
 					<Rotation>350.4</Rotation>
 				</RectangleArea>
