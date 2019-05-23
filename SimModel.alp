@@ -4714,6 +4714,187 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 					<Action><![CDATA[carsInnerNode = intersection.getCars().size();]]></Action>
 				</Event>
 			</Events>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1558555367977</Id>
+					<Name><![CDATA[generalizedPareto]]></Name>
+					<X>-80</X><Y>1760</Y>
+					<Label><X>-35</X><Y>-15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random = uniform();
+double X, mean=-1.7316, sigma = 38.179, k=0.00122;
+X = mean + (sigma*(Math.pow(random, -k)-1))/k;
+while (X<0){
+random = uniform();
+X = mean + (sigma*(Math.pow(random, -k)-1))/k;
+}
+return X;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1558556750782</Id>
+					<Name><![CDATA[Burr]]></Name>
+					<X>-80</X><Y>1870</Y>
+					<Label><X>-20</X><Y>-15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random = uniform();
+double X, k = 0.22308, alpha = 6.0231, beta = 1.8021;
+
+X = Math.pow((Math.pow(1/random,1/k)-1),1/alpha) * beta;
+
+return X;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1558558658835</Id>
+					<Name><![CDATA[Kumaraswamy]]></Name>
+					<X>-210</X><Y>1300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[alpha1]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[alpha2]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[a]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[b]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Body><![CDATA[double random = uniform();
+double X;
+X = ((b-a) * Math.pow((1-Math.pow(random, 1/alpha2)), alpha1)) + a;
+return X;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558565352656</Id>
+					<Name><![CDATA[agentSouthOL]]></Name>
+					<X>-110</X><Y>970</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.96457){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558565873352</Id>
+					<Name><![CDATA[agentSouthIL]]></Name>
+					<X>-110</X><Y>1070</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.897){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558568534552</Id>
+					<Name><![CDATA[agentNorthOL]]></Name>
+					<X>-160</X><Y>1210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.9525){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558568639211</Id>
+					<Name><![CDATA[agentNorthIL]]></Name>
+					<X>-170</X><Y>1340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.9285){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558568710813</Id>
+					<Name><![CDATA[agentWestOL]]></Name>
+					<X>-170</X><Y>1440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.9388){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558568854683</Id>
+					<Name><![CDATA[agentWestIL]]></Name>
+					<X>-190</X><Y>1610</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.9441){return new Car();}
+else {return new Truck();}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558568944221</Id>
+					<Name><![CDATA[agentEastIL]]></Name>
+					<X>-130</X><Y>1810</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.8629){return new Car();}
+else {return new Truck();} ]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Agent]]></ReturnType>
+					<Id>1558569012375</Id>
+					<Name><![CDATA[agentEastOL]]></Name>
+					<X>-180</X><Y>1900</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[double random=uniform();
+if (random <=0.8981){return new Car();}
+else {return new Truck();} ]]></Body>
+				</Function>
+			</Functions>
 			<CustomDistributions>
 				<CustomDistribution>
 					<Id>1558102068167</Id>
@@ -9057,60 +9238,8 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentSouthOL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9210,9 +9339,6 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 							<ClassName><![CDATA[CarMoveTo]]></ClassName>
 							<ItemName><![CDATA[1431084833294]]></ItemName>
 						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Car]]></Code>
-						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
@@ -9453,60 +9579,8 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentSouthIL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9606,9 +9680,6 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 							<ClassName><![CDATA[CarMoveTo]]></ClassName>
 							<ItemName><![CDATA[1431084833294]]></ItemName>
 						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Car]]></Code>
-						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
@@ -9705,9 +9776,6 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 							<ClassName><![CDATA[CarMoveTo]]></ClassName>
 							<ItemName><![CDATA[1431084833294]]></ItemName>
 						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Car]]></Code>
-						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
@@ -9822,7 +9890,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[customN()]]></Code>
+								<Code><![CDATA[Kumaraswamy(0.59833,1.7229,1.7021,113.94)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -9880,7 +9948,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[new Car()]]></Code>
+								<Code><![CDATA[agentNorthOL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10355,7 +10423,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[customW()]]></Code>
+								<Code><![CDATA[weibull(1.4337, 2.5197, 0.16322)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -10412,60 +10480,8 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentWestOL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10933,7 +10949,7 @@ queueLength_westOL += 1;]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[customE()]]></Code>
+								<Code><![CDATA[Burr()]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -10991,10 +11007,7 @@ queueLength_westOL += 1;]]></Code>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[randomlyCreate(
-Car.class,
-Truck.class
-)]]></Code>
+								<Code><![CDATA[agentEastOL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11844,7 +11857,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[customN2()]]></Code>
+								<Code><![CDATA[Kumaraswamy(0.69517,1.7937,1.8817,184.64)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -11904,60 +11917,8 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentNorthIL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12127,60 +12088,8 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentWestIL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12290,7 +12199,7 @@ Truck.class
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[customE2()]]></Code>
+								<Code><![CDATA[generalizedPareto()]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -12350,60 +12259,8 @@ Truck.class
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newCar]]></Name>
-							<Value Class="EntityCodeValue">
-								<EntityEmbeddedObject>
-									<ActiveObjectClass>
-										<PackageName><![CDATA[simmodel]]></PackageName>
-										<ClassName><![CDATA[Car]]></ClassName>
-									</ActiveObjectClass>
-									<GenericParameterSubstitute>
-										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[simmodel]]></PackageName>
-											<ClassName><![CDATA[Car]]></ClassName>
-											<ItemName><![CDATA[1556013348794]]></ItemName>
-										</GenericParameterSubstituteReference>
-									</GenericParameterSubstitute>
-									<Parameters>
-									</Parameters>
-									<ReplicationFlag>true</ReplicationFlag>
-									<Replication Class="CodeValue">
-										<Code><![CDATA[100]]></Code>
-									</Replication>
-									<CollectionType>ARRAY_LIST_BASED</CollectionType>
-									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-									<XCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</XCode>
-									<YCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</YCode>
-									<ZCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ZCode>
-									<ColumnCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</ColumnCode>
-									<RowCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</RowCode>
-									<LatitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LatitudeCode>
-									<LongitudeCode Class="CodeValue">
-										<Code><![CDATA[0]]></Code>
-									</LongitudeCode>
-									<LocationNameCode Class="CodeValue">
-										<Code><![CDATA[""]]></Code>
-									</LocationNameCode>
-									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-									<InitializationDatabaseTableQuery>
-										<TableReference>
-										</TableReference>
-									</InitializationDatabaseTableQuery>
-									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-									<QuantityColumn>
-									</QuantityColumn>
-								</EntityEmbeddedObject>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agentEastIL()]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
