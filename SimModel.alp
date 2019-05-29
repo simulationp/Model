@@ -484,7 +484,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 
 // ---- collect queue lengths ----
 // WEST
-if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
+if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13||currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16|| currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	//OL
@@ -502,10 +502,108 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 		}
 	queueLength_WestIL_vis = queueIL;
 	queueLength_WestIL_list.add(queueIL);
+	
 }
 
 
-//TODO same for every lane]]></Code>
+//TODO same for every lane
+//NORTH
+ if ((currentPhaseIndex == 1 ||currentPhaseIndex == 2||currentPhaseIndex == 3||currentPhaseIndex == 4 ||currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7||currentPhaseIndex == 8||currentPhaseIndex == 9 ||currentPhaseIndex == 10||currentPhaseIndex == 11||currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME){
+
+	int queueOL = 0;
+	int queueIL = 0;
+	
+	//OL
+	for (Agent a : roadNorthOL.getQueue())
+		if (a.getSpeed() < SPEED_THRESHOLD){
+			queueOL += 1;
+		}
+	queueLength_NorthOL_vis = queueOL;
+	queueLength_NorthOL_list.add(queueOL); 
+	
+	//IL
+	for (Agent b : roadNorthIL.getQueue())
+		if (b.getSpeed() < SPEED_THRESHOLD){ 
+			queueIL += 1;
+			
+		}
+	queueLength_NorthIL_vis = queueIL;
+	queueLength_NorthIL_list.add(queueIL);
+}
+
+//EAST
+ if  ((currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7 ||currentPhaseIndex == 8||currentPhaseIndex == 9||currentPhaseIndex == 10||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13|| currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16||currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
+	int queueOL = 0;
+	int queueIL = 0;
+	//OL
+	for (Agent a : roadEastOL.getQueue())
+		if (a.getSpeed() < SPEED_THRESHOLD){
+			queueOL += 1;
+		}
+	queueLength_EastOL_vis = queueOL;
+	queueLength_EastOL_list.add(queueOL); 
+	
+	//IL
+	for (Agent b : roadEastIL.getQueue())
+		if (b.getSpeed() < SPEED_THRESHOLD){ 
+			queueIL += 1;
+		}
+	queueLength_EastIL_vis = queueIL;
+	
+	queueLength_EastIL_list.add(queueIL);
+}
+
+
+//SOUTH
+
+ if ((currentPhaseIndex == 1 ||currentPhaseIndex == 2||currentPhaseIndex == 3||currentPhaseIndex == 4 ||currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7||currentPhaseIndex == 8||currentPhaseIndex == 9 ||currentPhaseIndex == 10||currentPhaseIndex == 11) && time(SECOND) >= STEADY_STATE_TIME) {
+	int queueOL = 0;
+	int queueIL = 0;
+	//OL
+	for (Agent a : roadSouthOL.getQueue())
+		if (a.getSpeed() < SPEED_THRESHOLD){
+			queueOL += 1;
+		}
+	queueLength_SouthOL_vis = queueOL;
+	queueLength_SouthOL_list.add(queueOL); 
+	
+	//IL
+	for (Agent b : roadSouthIL.getQueue())
+		if (b.getSpeed() < SPEED_THRESHOLD){ 
+			queueIL += 1;
+		}
+	queueLength_SouthIL_vis = queueIL;
+	queueLength_SouthIL_list.add(queueIL);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></Code>
 				</OnPhaseChange>
 			</TrafficLight>
 			<TrafficLight>
@@ -561,33 +659,6 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1558276781192</Id>
-					<Name><![CDATA[queueLength_WestOL_vis]]></Name>
-					<X>1020</X><Y>1950</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1558915118127</Id>
-					<Name><![CDATA[roadWestOL]]></Name>
-					<X>890</X><Y>1950</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[RouteSegment]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[new RouteSegment()]]></Code>
-						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -795,9 +866,51 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1559078281876</Id>
-					<Name><![CDATA[queueLength_WestIL_vis]]></Name>
-					<X>1020</X><Y>1980</Y>
+					<Id>1559143531065</Id>
+					<Name><![CDATA[queueLength_EastOL_vis]]></Name>
+					<X>1020</X><Y>1960</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143550157</Id>
+					<Name><![CDATA[roadEastOL]]></Name>
+					<X>890</X><Y>1960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143550163</Id>
+					<Name><![CDATA[roadEastIL]]></Name>
+					<X>890</X><Y>1990</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143627608</Id>
+					<Name><![CDATA[queueLength_EastIL_vis]]></Name>
+					<X>1020</X><Y>1990</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -807,9 +920,156 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1559078281912</Id>
+					<Id>1559143655224</Id>
+					<Name><![CDATA[queueLength_NorthOL_vis]]></Name>
+					<X>1020</X><Y>2090</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143655227</Id>
+					<Name><![CDATA[roadNorthOL]]></Name>
+					<X>890</X><Y>2090</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143655230</Id>
+					<Name><![CDATA[queueLength_NorthIL_vis]]></Name>
+					<X>1020</X><Y>2120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143655233</Id>
+					<Name><![CDATA[roadNorthIL]]></Name>
+					<X>890</X><Y>2120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143730008</Id>
+					<Name><![CDATA[queueLength_SouthOL_vis]]></Name>
+					<X>1020</X><Y>2160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143730010</Id>
+					<Name><![CDATA[roadSouthOL]]></Name>
+					<X>890</X><Y>2160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143730013</Id>
+					<Name><![CDATA[queueLength_SouthIL_vis]]></Name>
+					<X>1020</X><Y>2190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559143730015</Id>
+					<Name><![CDATA[roadSouthIL]]></Name>
+					<X>890</X><Y>2190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559144161106</Id>
+					<Name><![CDATA[queueLength_WestOL_vis]]></Name>
+					<X>1020</X><Y>2020</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559144161109</Id>
+					<Name><![CDATA[roadWestOL]]></Name>
+					<X>890</X><Y>2020</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[RouteSegment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new RouteSegment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559144161112</Id>
+					<Name><![CDATA[queueLength_WestIL_vis]]></Name>
+					<X>1020</X><Y>2050</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1559144161115</Id>
 					<Name><![CDATA[roadWestIL]]></Name>
-					<X>890</X><Y>1980</Y>
+					<X>890</X><Y>2050</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -900,21 +1160,6 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 					</Properties>                 
 				</Variable>
 				<Variable Class="CollectionVariable">
-					<Id>1558901257782</Id>
-					<Name><![CDATA[queueLength_WestOL_list]]></Name>
-					<X>1190</X><Y>1950</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
-						<ElementClass><![CDATA[Integer]]></ElementClass>
-						<ValueElementClass><![CDATA[String]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
 					<Id>1559071271790</Id>
 					<Name><![CDATA[carsInnerNode_list]]></Name>
 					<X>1190</X><Y>1790</Y>
@@ -930,9 +1175,114 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 
 				</Variable>
 				<Variable Class="CollectionVariable">
-					<Id>1559078281861</Id>
+					<Id>1559143588924</Id>
+					<Name><![CDATA[queueLength_EastOL_list]]></Name>
+					<X>1200</X><Y>1960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559143588960</Id>
+					<Name><![CDATA[queueLength_EastIL_list]]></Name>
+					<X>1200</X><Y>1990</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559143655201</Id>
+					<Name><![CDATA[queueLength_NorthOL_list]]></Name>
+					<X>1190</X><Y>2090</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559143655214</Id>
+					<Name><![CDATA[queueLength_NorthIL_list]]></Name>
+					<X>1190</X><Y>2120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559143729990</Id>
+					<Name><![CDATA[queueLength_SouthOL_list]]></Name>
+					<X>1190</X><Y>2160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559143729997</Id>
+					<Name><![CDATA[queueLength_SouthIL_list]]></Name>
+					<X>1190</X><Y>2190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559144161097</Id>
+					<Name><![CDATA[queueLength_WestOL_list]]></Name>
+					<X>1190</X><Y>2020</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559144161101</Id>
 					<Name><![CDATA[queueLength_WestIL_list]]></Name>
-					<X>1190</X><Y>1980</Y>
+					<X>1190</X><Y>2050</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11130,6 +11480,9 @@ totalCars_South += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadSouthOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -11473,6 +11826,9 @@ totalCars_South += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadSouthIL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -11569,6 +11925,9 @@ totalCars_South += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadSouthOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -11949,6 +12308,9 @@ totalCars_North += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadNorthOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -12045,6 +12407,9 @@ totalCars_North += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadNorthIL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -12914,6 +13279,9 @@ totalCars_East += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadEastOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -13016,6 +13384,9 @@ totalCars_East += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadEastIL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -30412,6 +30783,28 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<CustomPoints>true</CustomPoints>
 				</LaneConnector>
 
+				<LaneConnector SourceId="1556012043168" TargetId="1556012043168">
+					<Id>1559160796833</Id>
+					<Name><![CDATA[laneConnector6]]></Name>
+					<X>1058.9185375457241</X><Y>487.464894517082</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-110.11853754572417</X><Y>16.535105482918027</Y></Point>
+						<Point><X>-9.882437080965019</X><Y>1.528867993244262</Y></Point>
+						<Point><X>5.886141773990403</X><Y>38.04738276171548</Y></Point>
+						<Point><X>-3.9962953069746163</X><Y>39.576250754959744</Y></Point>
+						<Point><X>-110.11853754572417</X><Y>16.535105482918027</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+
 			</Shapes>
 
 				</RoadJunction>
@@ -30753,6 +31146,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>true</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadEastIL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 				<RoadStopline>
@@ -30775,6 +31171,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadEastOL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 				<RoadStopline>
@@ -30994,6 +31393,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadNorthIL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 				<RoadStopline>
@@ -31016,6 +31418,9 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadNorthOL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 			</Shapes>
@@ -31383,6 +31788,10 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadSouthIL.decreaseCars((Agent)car);
+roadSouthIL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 				<RoadStopline>
@@ -34183,6 +34592,228 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Expression><![CDATA[my_dataset4]]></Expression>
 					<Color>-10496</Color>
 					<Expression2><![CDATA[totalCars_wholeNode]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>10000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[60]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+    			<TimePlot>
+					<Id>1559162658256</Id>
+					<Name><![CDATA[plot6]]></Name>
+					<X>1390</X><Y>2110</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1558598400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>590</Width>
+					<Height>180</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>30</XOffset>
+						<YOffset>10</YOffset>
+						<Width>540</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>20</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MINUTE</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: East IL]]></Title>
+					<Expression><![CDATA[queueLengthsWestOL_ds]]></Expression>
+					<Color>-16777088</Color>
+					<Expression2><![CDATA[queueLength_EastIL_vis]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: East OL]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-10496</Color>
+					<Expression2><![CDATA[queueLength_EastOL_vis]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>10000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[60]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+    			<TimePlot>
+					<Id>1559162970956</Id>
+					<Name><![CDATA[plot7]]></Name>
+					<X>1380</X><Y>2320</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1558598400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>590</Width>
+					<Height>180</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>30</XOffset>
+						<YOffset>10</YOffset>
+						<Width>540</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>20</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MINUTE</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: North IL]]></Title>
+					<Expression><![CDATA[queueLengthsWestOL_ds]]></Expression>
+					<Color>-16744448</Color>
+					<Expression2><![CDATA[queueLength_NorthIL_vis]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: North OL]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-16711681</Color>
+					<Expression2><![CDATA[queueLength_NorthOL_vis]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>10000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[60]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+    			<TimePlot>
+					<Id>1559162974510</Id>
+					<Name><![CDATA[plot8]]></Name>
+					<X>1360</X><Y>2510</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1558598400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>590</Width>
+					<Height>180</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>30</XOffset>
+						<YOffset>10</YOffset>
+						<Width>540</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>20</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MINUTE</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: South IL]]></Title>
+					<Expression><![CDATA[queueLengthsWestOL_ds]]></Expression>
+					<Color>-16744448</Color>
+					<Expression2><![CDATA[queueLength_SouthIL_vis]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Queue length: South OL]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-10496</Color>
+					<Expression2><![CDATA[queueLength_SouthOL_vis]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
@@ -37222,15 +37853,15 @@ public class RouteSegment implements Serializable {
 	</JavaClasses>
 	<ModelResources>
 		<Resource>
+			<Path><![CDATA[3d/bus_1.dae]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
 			<Path><![CDATA[3d/car.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
-			<Path><![CDATA[3d/scooter.dae]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
-		<Resource>
-			<Path><![CDATA[3d/rider_position_3.dae]]></Path>
+			<Path><![CDATA[3d/lorry.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
@@ -37238,11 +37869,11 @@ public class RouteSegment implements Serializable {
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
-			<Path><![CDATA[3d/bus_1.dae]]></Path>
+			<Path><![CDATA[3d/rider_position_3.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
-			<Path><![CDATA[3d/lorry.dae]]></Path>
+			<Path><![CDATA[3d/scooter.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
