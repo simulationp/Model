@@ -484,7 +484,7 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 
 // ---- collect queue lengths ----
 // WEST
-if (currentPhaseIndex == 1 && time(SECOND) >= steadyStateTime) {
+if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	//OL
@@ -560,7 +560,7 @@ if (currentPhaseIndex == 1 && time(SECOND) >= steadyStateTime) {
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
+						<Type><![CDATA[int]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -877,7 +877,7 @@ if (currentPhaseIndex == 1 && time(SECOND) >= steadyStateTime) {
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1559076925162</Id>
-					<Name><![CDATA[steadyStateTime]]></Name>
+					<Name><![CDATA[STEADY_STATE_TIME]]></Name>
 					<X>1160</X><Y>1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -916,7 +916,7 @@ if (currentPhaseIndex == 1 && time(SECOND) >= steadyStateTime) {
 				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1559071271790</Id>
-					<Name><![CDATA[carsInnerNode]]></Name>
+					<Name><![CDATA[carsInnerNode_list]]></Name>
 					<X>1190</X><Y>1790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5087,12 +5087,7 @@ if (currentPhaseIndex == 1 && time(SECOND) >= steadyStateTime) {
 						</RecurrenceCode>
 						<Condition><![CDATA[time(MINUTE) == 59.9]]></Condition>
 					</Properties>
-					<Action><![CDATA[//calculate queueLength_means
-//TODO rest of the lists
-
-
-
-finishSimulation();]]></Action>
+					<Action><![CDATA[finishSimulation();]]></Action>
 				</Event>
 				<Event>
 					<Id>1559071271811</Id>
@@ -5114,7 +5109,7 @@ finishSimulation();]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1558339200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[steadyStateTime]]></Code>
+							<Code><![CDATA[STEADY_STATE_TIME]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -5124,7 +5119,7 @@ finishSimulation();]]></Action>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[int n = intersection.getCars().size();
-carsInnerNode.add(n);
+carsInnerNode_list.add(n);
 carsInnerNode_vis = n;]]></Action>
 				</Event>
 				<Event>
@@ -5147,7 +5142,7 @@ carsInnerNode_vis = n;]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1559116800000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[steadyStateTime]]></Code>
+							<Code><![CDATA[STEADY_STATE_TIME]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -5158,8 +5153,8 @@ carsInnerNode_vis = n;]]></Action>
 					</Properties>
 					<Action><![CDATA[totalCars_wholeNode = 0;
 totalBusses_wholeNode = 0;
-//TODO same for all the other total...
-//ATTENTION needs to be considered for calculating mean (extracting the first 20 sec...)]]></Action>
+
+//TODO same for all the other total...]]></Action>
 				</Event>
 			</Events>
 			<Functions>
@@ -35269,7 +35264,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<ParameterName><![CDATA[SPEED_THRESHOLD]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[steadyStateTime]]></ParameterName>
+					<ParameterName><![CDATA[STEADY_STATE_TIME]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
@@ -35291,7 +35286,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 		<!--   =========  Parameter Variation Experiment   ========  -->
 		<ParamVariationExperiment ActiveObjectClassId="1556011494852">
 			<Id>1558274476208</Id>
-			<Name><![CDATA[Validation_morning]]></Name>
+			<Name><![CDATA[Validation_morning_CalcAfterReplication]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>1024</MaximumMemory>
@@ -35300,19 +35295,26 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 			<AfterSimulationRunCode><![CDATA[// --- collecting queue length data from lists and calculating mean ---
 
 //WEST
+//OL
 queueCollect_WestOL.addAll(root.queueLength_WestOL_list);
-
 text3.setText(calculateCI(queueCollect_WestOL, queueWestOL_mean, queueWestOL_ci_min, queueWestOL_ci_max));
-
+//IL
 queueCollect_WestIL.addAll(root.queueLength_WestIL_list);
 text6.setText(calculateCI(queueCollect_WestIL, queueWestIL_mean, queueWestIL_ci_min, queueWestIL_ci_max));
 
 // TODO calc. ci for remaining data collections
 
 
+// ---- collecting total number of cars from variables
+collectTotalCars_wholeNode.add(root.totalCars_wholeNode);
+
+//TODO clear remaining data coll.
+
 // clearing collections
 queueCollect_WestOL.clear();
-queueCollect_WestIL.clear();]]></AfterSimulationRunCode>
+queueCollect_WestIL.clear();
+
+]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
@@ -35320,7 +35322,7 @@ queueCollect_WestIL.clear();]]></AfterSimulationRunCode>
 			<Variables>
 				<Variable Class="PlainVariable">
 					<Id>1559069903172</Id>
-					<Name><![CDATA[tValue]]></Name>
+					<Name><![CDATA[T_VALUE]]></Name>
 					<X>270</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -35454,6 +35456,21 @@ queueCollect_WestIL.clear();]]></AfterSimulationRunCode>
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559116552290</Id>
+					<Name><![CDATA[collectTotalCars_wholeNode]]></Name>
+					<X>60</X><Y>590</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -35531,7 +35548,7 @@ for (int j = 0; j < n; j++) {
 }
 
 double S_squared = sumdiffsq / (n-1);
-double tVal = tValue;
+double tVal = T_VALUE;
 double ci_min = mean - tVal * sqrt( S_squared / n);
 
 return ci_min;]]></Body>
@@ -35565,7 +35582,7 @@ for (int j = 0; j < n; j++) {
 }
 
 double S_squared = sumdiffsq / (n-1);
-double tVal = tValue;
+double tVal = T_VALUE;
 double ci_max = mean + tVal * sqrt( S_squared / n);
 
 return ci_max;]]></Body>
@@ -35686,6 +35703,72 @@ return ci_max;]]></Body>
 					<Id>1559080923413</Id>
 					<Name><![CDATA[queueWestIL_mean]]></Name>
 					<X>410</X><Y>240</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559116717150</Id>
+					<Name><![CDATA[totalCars_ci_min]]></Name>
+					<X>610</X><Y>590</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559116717215</Id>
+					<Name><![CDATA[totalCars_ci_max]]></Name>
+					<X>800</X><Y>590</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559116717254</Id>
+					<Name><![CDATA[totalCars_mean]]></Name>
+					<X>440</X><Y>590</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -35900,6 +35983,27 @@ return ci_max;]]></Body>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1559116686318</Id>
+					<Name><![CDATA[text7]]></Name>
+					<X>300</X><Y>580</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Charts>
     			<Plot>
@@ -36072,6 +36176,10 @@ return ci_max;]]></Body>
     			</Plot>
 			</Charts>
 
+			<AfterIterationCode><![CDATA[// calculate c.i for totalNumberOfCars
+text7.setText(calculateCI(collectTotalCars_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
+
+//TODO remaining variables]]></AfterIterationCode>
 			<AllowParallelEvaluations>false</AllowParallelEvaluations>
 			<UseFreeformParameters>false</UseFreeformParameters>
 			<NumberOfRuns>10</NumberOfRuns>
@@ -36116,7 +36224,7 @@ return ci_max;]]></Body>
 		<!--   =========  Parameter Variation Experiment   ========  -->
 		<ParamVariationExperiment ActiveObjectClassId="1556011494852">
 			<Id>1559082967371</Id>
-			<Name><![CDATA[Validation_morning2]]></Name>
+			<Name><![CDATA[Validation_morning_CalcAfterIteration]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>1024</MaximumMemory>
@@ -36131,7 +36239,11 @@ queueCollect_WestIL.addAll(root.queueLength_WestIL_list);
 // TODO calc. ci for remaining data collections
 
 
-]]></AfterSimulationRunCode>
+
+// ---- collecting total number of cars from variables
+collectTotalCars_wholeNode.add(root.totalCars_wholeNode);
+
+//TODO clear remaining data coll.]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
@@ -36139,7 +36251,7 @@ queueCollect_WestIL.addAll(root.queueLength_WestIL_list);
 			<Variables>
 				<Variable Class="PlainVariable">
 					<Id>1559082967427</Id>
-					<Name><![CDATA[tValue]]></Name>
+					<Name><![CDATA[T_VALUE]]></Name>
 					<X>270</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -36273,6 +36385,21 @@ queueCollect_WestIL.addAll(root.queueLength_WestIL_list);
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559117901105</Id>
+					<Name><![CDATA[collectTotalCars_wholeNode]]></Name>
+					<X>60</X><Y>590</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -36350,7 +36477,7 @@ for (int j = 0; j < n; j++) {
 }
 
 double S_squared = sumdiffsq / (n-1);
-double tVal = tValue;
+double tVal = T_VALUE;
 double ci_min = mean - tVal * sqrt( S_squared / n);
 
 return ci_min;]]></Body>
@@ -36384,7 +36511,7 @@ for (int j = 0; j < n; j++) {
 }
 
 double S_squared = sumdiffsq / (n-1);
-double tVal = tValue;
+double tVal = T_VALUE;
 double ci_max = mean + tVal * sqrt( S_squared / n);
 
 return ci_max;]]></Body>
@@ -36505,6 +36632,72 @@ return ci_max;]]></Body>
 					<Id>1559082967389</Id>
 					<Name><![CDATA[queueWestIL_mean]]></Name>
 					<X>410</X><Y>240</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559117901129</Id>
+					<Name><![CDATA[totalCars_ci_min]]></Name>
+					<X>610</X><Y>590</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559117901149</Id>
+					<Name><![CDATA[totalCars_ci_max]]></Name>
+					<X>800</X><Y>590</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1546588800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559117901168</Id>
+					<Name><![CDATA[totalCars_mean]]></Name>
+					<X>440</X><Y>590</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -36719,6 +36912,27 @@ return ci_max;]]></Body>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1559117901097</Id>
+					<Name><![CDATA[text7]]></Name>
+					<X>300</X><Y>580</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Charts>
     			<Plot>
@@ -36894,6 +37108,11 @@ return ci_max;]]></Body>
 			<AfterIterationCode><![CDATA[// calculating mean
 text3.setText(calculateCI(queueCollect_WestOL, queueWestOL_mean, queueWestOL_ci_min, queueWestOL_ci_max));
 text6.setText(calculateCI(queueCollect_WestIL, queueWestIL_mean, queueWestIL_ci_min, queueWestIL_ci_max));
+
+
+// calculate c.i for totalNumberOfCars
+text7.setText(calculateCI(collectTotalCars_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
+//TODO remaining variables
 
 // clearing collections
 queueCollect_WestOL.clear();
