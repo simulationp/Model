@@ -140,9 +140,10 @@ East.turnOn(5);]]></StartupCode>
 				<Line>1556013130109</Line>
 				<Line>1556013220244</Line>
 				<Line>1556013235190</Line>
-				<Line>1556011982977</Line>
 				<Line>1558904219988</Line>
 				<Line>1558904255222</Line>
+				<Line>1559204214914</Line>
+				<Line>1559204223494</Line>
 				<Duration Class="CodeValue">
 					<Code><![CDATA[2]]></Code>
 				</Duration>
@@ -467,6 +468,24 @@ East.turnOn(5);]]></StartupCode>
 				<State>GREEN</State>
 				<State>GREEN</State>
 				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>RED</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>GREEN</State>
+				<State>RED</State>
 				<OnPhaseChange Class="CodeValue">
 					<Code><![CDATA[AreaESN.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
 AreaENS.setOpen(currentPhaseIndex == 11 || currentPhaseIndex == 12 || currentPhaseIndex == 13);
@@ -484,7 +503,8 @@ West1.setOpen(currentPhaseIndex == 10 || currentPhaseIndex == 11 || currentPhase
 
 // ---- collect queue lengths ----
 // WEST
-if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13||currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16|| currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
+//if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13||currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16|| currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
+if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	//OL
@@ -508,8 +528,7 @@ if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||
 
 //TODO same for every lane
 //NORTH
- if ((currentPhaseIndex == 1 ||currentPhaseIndex == 2||currentPhaseIndex == 3||currentPhaseIndex == 4 ||currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7||currentPhaseIndex == 8||currentPhaseIndex == 9 ||currentPhaseIndex == 10||currentPhaseIndex == 11||currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME){
-
+if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	
@@ -532,7 +551,8 @@ if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||
 }
 
 //EAST
- if  ((currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7 ||currentPhaseIndex == 8||currentPhaseIndex == 9||currentPhaseIndex == 10||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13|| currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16||currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
+// if  ((currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7 ||currentPhaseIndex == 8||currentPhaseIndex == 9||currentPhaseIndex == 10||currentPhaseIndex == 11||currentPhaseIndex == 12||currentPhaseIndex == 13|| currentPhaseIndex == 14||currentPhaseIndex == 15||currentPhaseIndex == 16||currentPhaseIndex == 17) && time(SECOND) >= STEADY_STATE_TIME) {
+if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	//OL
@@ -556,7 +576,8 @@ if ((currentPhaseIndex == 9||currentPhaseIndex == 10 ||currentPhaseIndex == 11||
 
 //SOUTH
 
- if ((currentPhaseIndex == 1 ||currentPhaseIndex == 2||currentPhaseIndex == 3||currentPhaseIndex == 4 ||currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7||currentPhaseIndex == 8||currentPhaseIndex == 9 ||currentPhaseIndex == 10||currentPhaseIndex == 11) && time(SECOND) >= STEADY_STATE_TIME) {
+//if ((currentPhaseIndex == 1 ||currentPhaseIndex == 2||currentPhaseIndex == 3||currentPhaseIndex == 4 ||currentPhaseIndex == 5||currentPhaseIndex == 6||currentPhaseIndex == 7||currentPhaseIndex == 8||currentPhaseIndex == 9 ||currentPhaseIndex == 10||currentPhaseIndex == 11) && time(SECOND) >= STEADY_STATE_TIME) {
+if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
 	int queueIL = 0;
 	//OL
@@ -12212,6 +12233,9 @@ totalCars_North += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadNorthOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -12749,6 +12773,9 @@ totalCars_West += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadWestOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -13483,6 +13510,9 @@ totalCars_East += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[roadEastOL.incrementCars((Agent) car);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -31770,13 +31800,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1556011982977</Id>
 					<Name><![CDATA[stopLine1]]></Name>
-					<X>1031.754</X><Y>555.127</Y>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
+					<X>1087.859</X><Y>691.794</Y>
 					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>148.04</Offset>
+					<Offset>0.0</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -31788,10 +31819,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-					<OnCarPassedAction Class="CodeValue">
-						<Code><![CDATA[roadSouthIL.decreaseCars((Agent)car);
-roadSouthIL.decreaseCars((Agent)car);]]></Code>
-					</OnCarPassedAction>
 				</RoadStopline>
 
 				<RoadStopline>
@@ -31947,6 +31974,56 @@ roadSouthIL.decreaseCars((Agent)car);]]></Code>
 					</SpeedLimitValue>
 					<YieldSign>false</YieldSign>
 					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+				</RoadStopline>
+
+				<RoadStopline>
+					<Id>1559204214914</Id>
+					<Name><![CDATA[stopLine32]]></Name>
+					<X>1010</X><Y>563</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>146.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>1</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadSouthIL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
+				</RoadStopline>
+
+				<RoadStopline>
+					<Id>1559204223494</Id>
+					<Name><![CDATA[stopLine34]]></Name>
+					<X>1010</X><Y>562.8</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>146.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>1</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<OnCarPassedAction Class="CodeValue">
+						<Code><![CDATA[roadSouthOL.decreaseCars((Agent)car);]]></Code>
+					</OnCarPassedAction>
 				</RoadStopline>
 
 			</Shapes>
