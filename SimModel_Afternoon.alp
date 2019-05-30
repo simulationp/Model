@@ -28,7 +28,10 @@ carEastIL.inject(3);
 carWestOL.inject(4);
 carWestIL.inject(3);
 
-East.turnOn(5);]]></StartupCode>
+East.turnOff();
+West.turnOff();
+East.turnOn(7);
+West.turnOn(22);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1556011494851</Id>
@@ -426,10 +429,10 @@ West1.setOpen(currentPhaseIndex == 7 || currentPhaseIndex == 8 || currentPhaseIn
 				<Type>STOP_LINES</Type>
 				<Line>1558045927210</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[50]]></Code>
+					<Code><![CDATA[60]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[30]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
@@ -447,10 +450,10 @@ West1.setOpen(currentPhaseIndex == 7 || currentPhaseIndex == 8 || currentPhaseIn
 				<Type>STOP_LINES</Type>
 				<Line>1559060067607</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[50]]></Code>
+					<Code><![CDATA[55]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[35]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
@@ -30181,28 +30184,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 			</EmbeddedObjects>
 
 			<Shapes>
-				<Rectangle>
-					<Id>1558398431226</Id>
-					<Name><![CDATA[rectangle11]]></Name>
-					<X>-0.6</X><Y>1188.6</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>419</Width>
-					<Height>229</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Image>
 					<Id>1556011530668</Id>
 					<Name><![CDATA[image]]></Name>
@@ -33366,28 +33347,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<Z>0</Z>
 				</Ground>
 
-				<Rectangle>
-					<Id>1557522726026</Id>
-					<Name><![CDATA[rectangle]]></Name>
-					<X>0</X><Y>943</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>419</Width>
-					<Height>245</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557522734600</Id>
 					<Name><![CDATA[text]]></Name>
@@ -33430,28 +33389,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557523106358</Id>
-					<Name><![CDATA[rectangle2]]></Name>
-					<X>1</X><Y>1417</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>418.267</Width>
-					<Height>262</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557523168713</Id>
 					<Name><![CDATA[text2]]></Name>
@@ -33473,28 +33410,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557523463761</Id>
-					<Name><![CDATA[rectangle3]]></Name>
-					<X>0.8</X><Y>1845</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>417.6</Width>
-					<Height>134.2</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557523503227</Id>
 					<Name><![CDATA[text3]]></Name>
@@ -33516,28 +33431,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557523696896</Id>
-					<Name><![CDATA[rectangle4]]></Name>
-					<X>0.4</X><Y>1980.6</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>417.2</Width>
-					<Height>213.8</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557523705513</Id>
 					<Name><![CDATA[text4]]></Name>
@@ -33559,28 +33452,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557523910035</Id>
-					<Name><![CDATA[rectangle5]]></Name>
-					<X>418.833</X><Y>942.333</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>419</Width>
-					<Height>177.667</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557523925051</Id>
 					<Name><![CDATA[text5]]></Name>
@@ -33602,28 +33473,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557524131785</Id>
-					<Name><![CDATA[rectangle6]]></Name>
-					<X>419.667</X><Y>1484</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>417.6</Width>
-					<Height>194.8</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557524137381</Id>
 					<Name><![CDATA[text6]]></Name>
@@ -33645,28 +33494,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557524938655</Id>
-					<Name><![CDATA[rectangle7]]></Name>
-					<X>420.334</X><Y>1294.333</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>418.267</Width>
-					<Height>188.667</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557524944763</Id>
 					<Name><![CDATA[text7]]></Name>
@@ -33688,28 +33515,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557525685485</Id>
-					<Name><![CDATA[rectangle8]]></Name>
-					<X>838</X><Y>942.667</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>267.333</Width>
-					<Height>176</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557525719113</Id>
 					<Name><![CDATA[text8]]></Name>
@@ -33731,28 +33536,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557525749603</Id>
-					<Name><![CDATA[rectangle9]]></Name>
-					<X>419.267</X><Y>1119</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>419</Width>
-					<Height>175</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1557525808573</Id>
 					<Name><![CDATA[text9]]></Name>
@@ -33774,50 +33557,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1557833736172</Id>
-					<Name><![CDATA[rectangle1]]></Name>
-					<X>419.001</X><Y>1679</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>419.999</Width>
-					<Height>252.333</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Rectangle>
-					<Id>1558276096026</Id>
-					<Name><![CDATA[rectangle10]]></Name>
-					<X>838</X><Y>1502.667</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>760</Width>
-					<Height>390</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1558276102931</Id>
 					<Name><![CDATA[text10]]></Name>
@@ -33839,28 +33578,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1558398986763</Id>
-					<Name><![CDATA[rectangle12]]></Name>
-					<X>1</X><Y>1680.2</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>417.6</Width>
-					<Height>163.8</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1558399005527</Id>
 					<Name><![CDATA[text11]]></Name>
@@ -33945,28 +33662,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1558401106796</Id>
-					<Name><![CDATA[rectangle13]]></Name>
-					<X>838</X><Y>1119.667</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>530</Width>
-					<Height>383.333</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1558401121813</Id>
 					<Name><![CDATA[text15]]></Name>

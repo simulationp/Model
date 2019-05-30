@@ -26,7 +26,10 @@ carEastIL.inject(3);
 carWestOL.inject(4);
 carWestIL.inject(3);
 
-East.turnOn(5);]]></StartupCode>
+East.turnOff();
+West.turnOff();
+East.turnOn(7);
+West.turnOn(22);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1556011494851</Id>
@@ -638,10 +641,10 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Type>STOP_LINES</Type>
 				<Line>1558045927210</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[52]]></Code>
+					<Code><![CDATA[70]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[48]]></Code>
+					<Code><![CDATA[30]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
@@ -659,10 +662,10 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Type>STOP_LINES</Type>
 				<Line>1558972779403</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[65]]></Code>
+					<Code><![CDATA[60]]></Code>
 				</Duration>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[35]]></Code>
+					<Code><![CDATA[40]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
@@ -35932,7 +35935,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<InitialSetupCode><![CDATA[//Car c = new Car();
 //c.moveTo(1252, 454);
-
 
 ]]></InitialSetupCode>
 			<MaximumMemory>512</MaximumMemory>
