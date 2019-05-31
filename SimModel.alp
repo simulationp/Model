@@ -36947,7 +36947,7 @@ text7.setText(calculateCI(collectTotalCars_wholeNode, totalCars_mean, totalCars_
 		<!--   =========  Parameter Variation Experiment   ========  -->
 		<ParamVariationExperiment ActiveObjectClassId="1556011494852">
 			<Id>1559082967371</Id>
-			<Name><![CDATA[Validation_morning_CalcAfterIteration]]></Name>
+			<Name><![CDATA[Validation_morning]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>4096</MaximumMemory>
@@ -36958,6 +36958,7 @@ text7.setText(calculateCI(collectTotalCars_wholeNode, totalCars_mean, totalCars_
 //WEST
 queueCollect_WestOL.addAll(root.queueLength_WestOL_list);
 queueCollect_WestIL.addAll(root.queueLength_WestIL_list);
+
 
 //EAST
 queueCollect_EastOL.addAll(root.queueLength_EastOL_list);
@@ -36993,9 +36994,10 @@ totalCarsCollect_North.add(root.totalCars_North);
 totalCarsCollect_innerNode.add(root.carsInnerNode_vis);
 
 
-// calculating mean and c.i. (cumulative)
+// calculating mean and c.i.
 //west
 text3.setText(calculateCI(queueCollect_WestOL, queueWestOL_mean, queueWestOL_ci_min, queueWestOL_ci_max));
+
 text6.setText(calculateCI(queueCollect_WestIL, queueWestIL_mean, queueWestIL_ci_min, queueWestIL_ci_max));
 //east
 text13.setText(calculateCI(queueCollect_EastOL, queueEastOL_mean, queueEastOL_ci_min, queueEastOL_ci_max));
@@ -37009,7 +37011,7 @@ text8.setText(calculateCI(queueCollect_NorthIL, queueNorthIL_mean, queueNorthIL_
 text11.setText(calculateCI(queueCollect_SouthOL, queueSouthOL_mean, queueSouthOL_ci_min, queueSouthOL_ci_max));
 text10.setText(calculateCI(queueCollect_SouthIL, queueSouthIL_mean, queueSouthIL_ci_min, queueSouthIL_ci_max));
 
-/*
+
 //viewing and collecting variables to datasets
 totalCars_mean.add(getCurrentReplication(),root.totalCars_wholeNode);
 totalCars_mean1.add(getCurrentReplication(),root.totalBusses_wholeNode);
@@ -37030,6 +37032,27 @@ totalCars_mean15.add(getCurrentReplication(), root.carsInnerNode_vis);
 totalCars_mean16.add(getCurrentReplication(), root.totalCars_SchOut);
 totalCars_mean17.add(getCurrentReplication(), root.totalCars_SchIn);
 
+// calculate difference between simulated and real worl data
+collectDiff_queueWestOL.add(calcDiff(10.44, queueWestOL_mean));
+collectDiff_queueWestIL.add(calcDiff(5.54, queueWestIL_mean));
+
+
+//TODO Queue length
+
+collectDiff_queueEastOL.add(calcDiff(5.60, queueEastOL_mean));
+collectDiff_queueEastIL.add(calcDiff(1.02, queueEastIL_mean));
+collectDiff_queueSouthOL.add(calcDiff(8.53, queueSouthOL_mean));
+collectDiff_queueSouthIL.add(calcDiff(2.66, queueSouthIL_mean));
+collectDiff_queueNorthOL.add(calcDiff(2.86, queueNorthOL_mean));
+collectDiff_queueNorthIL.add(calcDiff(1.81, queueNorthIL_mean));
+
+
+
+
+
+
+
+
 
 // clearing collections
 queueCollect_WestOL.clear();
@@ -37039,8 +37062,7 @@ queueCollect_EastIL.clear();
 queueCollect_SouthOL.clear();
 queueCollect_SouthIL.clear();
 queueCollect_NorthOL.clear();
-queueCollect_NorthIL.clear();
-*/]]></AfterSimulationRunCode>
+queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
@@ -37452,6 +37474,126 @@ queueCollect_NorthIL.clear();
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559329459909</Id>
+					<Name><![CDATA[collectDiff_queueWestOL]]></Name>
+					<X>80</X><Y>1640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559329459911</Id>
+					<Name><![CDATA[collectDiff_queueWestIL]]></Name>
+					<X>80</X><Y>1670</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332229521</Id>
+					<Name><![CDATA[collectDiff_queueEastOL]]></Name>
+					<X>80</X><Y>1820</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332229523</Id>
+					<Name><![CDATA[collectDiff_queueEastIL]]></Name>
+					<X>80</X><Y>1850</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332251604</Id>
+					<Name><![CDATA[collectDiff_queueSouthOL]]></Name>
+					<X>70</X><Y>2000</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332251616</Id>
+					<Name><![CDATA[collectDiff_queueSouthIL]]></Name>
+					<X>70</X><Y>2030</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332264747</Id>
+					<Name><![CDATA[collectDiff_queueNorthOL]]></Name>
+					<X>70</X><Y>2190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1559332264758</Id>
+					<Name><![CDATA[collectDiff_queueNorthIL]]></Name>
+					<X>70</X><Y>2220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -37555,6 +37697,136 @@ return ci_min;]]></Body>
 					<Parameter>
 						<Name><![CDATA[collectionName]]></Name>
 						<Type><![CDATA[ArrayList<Integer>]]></Type>
+					</Parameter>
+					<Body><![CDATA[//calculate sum of squared differences
+double sumdiffsq = 0; 
+for (int j = 0; j < n; j++) {
+	sumdiffsq += (collectionName.get(j)- mean)*(collectionName.get(j) - mean);
+}
+
+double S_squared = sumdiffsq / (n-1);
+double tVal = T_VALUE;
+double ci_max = mean + tVal * sqrt( S_squared / n);
+
+return ci_max;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1559329459913</Id>
+					<Name><![CDATA[calcDiff]]></Name>
+					<X>80</X><Y>1540</Y>
+					<Label><X>15</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[Y2]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[ds_mean]]></Name>
+						<Type><![CDATA[DataSet]]></Type>
+					</Parameter>
+					<Body><![CDATA[/*if (getCurrentReplication()=0) 
+	Y1 = queueWestOL_mean.getY(0);
+else */
+double Y1 = ds_mean.getY(getCurrentReplication()-1);
+double D_r = Y1-Y2;
+return D_r;
+]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[String]]></ReturnType>
+					<Id>1559329459924</Id>
+					<Name><![CDATA[calcComparison]]></Name>
+					<X>500</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[collection]]></Name>
+						<Type><![CDATA[ArrayList<Double>]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[ds_comp]]></Name>
+						<Type><![CDATA[DataSet]]></Type>
+					</Parameter>
+					<Body><![CDATA[int n = collection.size();
+double sum = 0;
+for (int i = 0; i<n;i++) {
+	sum += collection.get(i);
+}
+double mean = sum / n;
+
+// calculate confidence interval 
+double ci_min = ciMin1(mean, n, collection); 
+double ci_max = ciMax1(mean, n, collection); 
+
+ds_comp.add(mean);
+ds_comp.add(ci_min);
+ds_comp.add(ci_max);
+
+String txt = format(ci_min) +" <= theta <= " + format(ci_max);
+return txt;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1559329459926</Id>
+					<Name><![CDATA[ciMin1]]></Name>
+					<X>240</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[mean]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[n]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[collectionName]]></Name>
+						<Type><![CDATA[ArrayList<Double>]]></Type>
+					</Parameter>
+					<Body><![CDATA[//calculate sum of squared differences
+double sumdiffsq = 0; 
+for (int j = 0; j < n; j++) {
+	sumdiffsq += (collectionName.get(j)- mean)*(collectionName.get(j) - mean);
+}
+
+double S_squared = sumdiffsq / (n-1);
+double tVal = T_VALUE;
+double ci_min = mean - tVal * sqrt( S_squared / n);
+
+return ci_min;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1559329459928</Id>
+					<Name><![CDATA[ciMax1]]></Name>
+					<X>340</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[mean]]></Name>
+						<Type><![CDATA[double]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[n]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[collectionName]]></Name>
+						<Type><![CDATA[ArrayList<Double>]]></Type>
 					</Parameter>
 					<Body><![CDATA[//calculate sum of squared differences
 double sumdiffsq = 0; 
@@ -39286,6 +39558,182 @@ return ci_max;]]></Body>
 					<FreezeXAxis>false</FreezeXAxis>
 					<SamplesToKeep>100</SamplesToKeep>
 				</DataSet>
+    			<DataSet>
+					<Id>1559329459931</Id>
+					<Name><![CDATA[comparison_queueWestOL]]></Name>
+					<X>340</X><Y>1640</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559329459941</Id>
+					<Name><![CDATA[comparison_queueWestIL]]></Name>
+					<X>340</X><Y>1670</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332229537</Id>
+					<Name><![CDATA[comparison_queueEastOL]]></Name>
+					<X>340</X><Y>1820</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332229553</Id>
+					<Name><![CDATA[comparison_queueEastIL]]></Name>
+					<X>340</X><Y>1850</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332251633</Id>
+					<Name><![CDATA[comparison_queueSouthOL]]></Name>
+					<X>330</X><Y>2000</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332251648</Id>
+					<Name><![CDATA[comparison_queueSouthIL]]></Name>
+					<X>330</X><Y>2030</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332264761</Id>
+					<Name><![CDATA[comparison_queueNorthOL]]></Name>
+					<X>330</X><Y>2190</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1559332264791</Id>
+					<Name><![CDATA[comparison_queueNorthIL]]></Name>
+					<X>330</X><Y>2220</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>100</SamplesToKeep>
+				</DataSet>
 			</AnalysisData>
 
 			<Shapes>
@@ -39986,12 +40434,244 @@ return ci_max;]]></Body>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1559329459862</Id>
+					<Name><![CDATA[text31]]></Name>
+					<X>620</X><Y>1630</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559329459877</Id>
+					<Name><![CDATA[text32]]></Name>
+					<X>620</X><Y>1650</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1559329541246</Id>
+					<Name><![CDATA[rectangle2]]></Name>
+					<X>50</X><Y>1490</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>610</Width>
+					<Height>80</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1559332096163</Id>
+					<Name><![CDATA[text33]]></Name>
+					<X>1090</X><Y>1820</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332096226</Id>
+					<Name><![CDATA[text34]]></Name>
+					<X>1090</X><Y>1840</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332229505</Id>
+					<Name><![CDATA[text35]]></Name>
+					<X>620</X><Y>1810</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332229507</Id>
+					<Name><![CDATA[text36]]></Name>
+					<X>620</X><Y>1830</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332251600</Id>
+					<Name><![CDATA[text37]]></Name>
+					<X>610</X><Y>1990</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332251602</Id>
+					<Name><![CDATA[text38]]></Name>
+					<X>610</X><Y>2010</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332264743</Id>
+					<Name><![CDATA[text39]]></Name>
+					<X>610</X><Y>2180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1559332264745</Id>
+					<Name><![CDATA[text40]]></Name>
+					<X>610</X><Y>2200</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Charts>
     			<Plot>
 					<Id>1559082967395</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>960</X><Y>80</Y>
+					<X>1000</X><Y>300</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40075,7 +40755,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559082967401</Id>
 					<Name><![CDATA[plot1]]></Name>
-					<X>1310</X><Y>80</Y>
+					<X>1310</X><Y>280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40159,7 +40839,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559306428897</Id>
 					<Name><![CDATA[plot2]]></Name>
-					<X>1000</X><Y>300</Y>
+					<X>1000</X><Y>500</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40243,7 +40923,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559306492775</Id>
 					<Name><![CDATA[plot3]]></Name>
-					<X>1330</X><Y>290</Y>
+					<X>1330</X><Y>490</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40327,7 +41007,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559306606368</Id>
 					<Name><![CDATA[plot4]]></Name>
-					<X>960</X><Y>560</Y>
+					<X>960</X><Y>760</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40411,7 +41091,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559306709801</Id>
 					<Name><![CDATA[plot5]]></Name>
-					<X>1280</X><Y>550</Y>
+					<X>1280</X><Y>750</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40495,7 +41175,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559307519110</Id>
 					<Name><![CDATA[plot6]]></Name>
-					<X>960</X><Y>770</Y>
+					<X>960</X><Y>970</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40579,7 +41259,7 @@ return ci_max;]]></Body>
     			<Plot>
 					<Id>1559307647202</Id>
 					<Name><![CDATA[plot7]]></Name>
-					<X>1400</X><Y>780</Y>
+					<X>1400</X><Y>980</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40660,9 +41340,137 @@ return ci_max;]]></Body>
 					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
 					<HorScaleType>AUTO</HorScaleType>
     			</Plot>
+    			<Plot>
+					<Id>1559329459896</Id>
+					<Name><![CDATA[plot8]]></Name>
+					<X>760</X><Y>1560</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestOL]]></Title>
+					<Expression><![CDATA[comparison_queueWestOL]]></Expression>
+					<Color>-3137392</Color>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559329688595</Id>
+					<Name><![CDATA[plot9]]></Name>
+					<X>970</X><Y>1560</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestIL]]></Title>
+					<Expression><![CDATA[comparison_queueWestIL]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
 			</Charts>
 
-			<AfterIterationCode><![CDATA[// calculate c.i for totalNumberOfCars
+			<AfterIterationCode><![CDATA[/*
+// calculate c.i for totalNumberOfCars
 text7.setText(calculateCI(totalCarsCollect_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
 text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min, totalCars_ci_max));
 text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min, totalCars_ci_max));
@@ -40681,8 +41489,22 @@ text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_c
 text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min, totalCars_ci_max));
 text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min, totalCars_ci_max));
 text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min, totalCars_ci_max));
+*/
 
-*/]]></AfterIterationCode>
+// system comparing
+text31.setText(calcComparison(collectDiff_queueWestOL, comparison_queueWestOL));
+text32.setText(calcComparison(collectDiff_queueWestIL, comparison_queueWestIL));
+
+//TODO
+
+text35.setText(calcComparison(collectDiff_queueEastOL, comparison_queueEastOL));
+text36.setText(calcComparison(collectDiff_queueEastIL, comparison_queueEastIL));
+text37.setText(calcComparison(collectDiff_queueSouthOL, comparison_queueSouthOL));
+text38.setText(calcComparison(collectDiff_queueSouthIL, comparison_queueSouthIL));
+text39.setText(calcComparison(collectDiff_queueNorthOL, comparison_queueNorthOL));
+text40.setText(calcComparison(collectDiff_queueNorthIL, comparison_queueNorthIL));
+
+]]></AfterIterationCode>
 			<AllowParallelEvaluations>false</AllowParallelEvaluations>
 			<UseFreeformParameters>false</UseFreeformParameters>
 			<NumberOfRuns>10</NumberOfRuns>
@@ -40716,7 +41538,7 @@ text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_c
 			<ReplicationsProperties>
 				<UseReplication>true</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
-				<ReplicationPerIteration>20</ReplicationPerIteration>
+				<ReplicationPerIteration>5</ReplicationPerIteration>
 				<MinimumReplication>2</MinimumReplication>
 				<MaximumReplication>10</MaximumReplication>
 				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>
