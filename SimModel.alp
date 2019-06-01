@@ -36074,7 +36074,8 @@ text10.setText(calculateCI(queueCollect_SouthIL, queueSouthIL_mean, queueSouthIL
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[//2.262;	//df=9, n=10, alpha = 0,05
-2.364; 		//df = 100, n = 101, alpha = 0,01]]></Code>
+//1.984; 		//df = 100, n = 101, alpha = 0,05
+2.330;		//df =1000, n = 1001, alpha = 0,02]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -39680,23 +39681,23 @@ return ci_max;]]></Body>
 
 			<AfterIterationCode><![CDATA[// calculate c.i for totalNumberOfCars
 text7.setText(calculateCI(totalCarsCollect_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
-text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min, totalCars_ci_max));
-text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min, totalCars_ci_max));
-text16.setText(calculateCI(totalCarsCollect_WestIL, totalCars_mean3, totalCars_ci_min, totalCars_ci_max));
-text17.setText(calculateCI(totalCarsCollect_WestOL, totalCars_mean4, totalCars_ci_min, totalCars_ci_max));
-text18.setText(calculateCI(totalCarsCollect_SouthIL, totalCars_mean5, totalCars_ci_min, totalCars_ci_max));
-text19.setText(calculateCI(totalCarsCollect_SouthOL, totalCars_mean6, totalCars_ci_min, totalCars_ci_max));
-text20.setText(calculateCI(totalCarsCollect_EastIL, totalCars_mean7, totalCars_ci_min, totalCars_ci_max));
-text21.setText(calculateCI(totalCarsCollect_EastOL, totalCars_mean8, totalCars_ci_min, totalCars_ci_max));
-text22.setText(calculateCI(totalCarsCollect_NorthIL, totalCars_mean9, totalCars_ci_min, totalCars_ci_max));
-text23.setText(calculateCI(totalCarsCollect_NorthOL, totalCars_mean10, totalCars_ci_min, totalCars_ci_max));
-text24.setText(calculateCI(totalCarsCollect_West, totalCars_mean11, totalCars_ci_min, totalCars_ci_max));
-text25.setText(calculateCI(totalCarsCollect_South, totalCars_mean12, totalCars_ci_min, totalCars_ci_max));
-text26.setText(calculateCI(totalCarsCollect_East, totalCars_mean13, totalCars_ci_min, totalCars_ci_max));
-text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_ci_min, totalCars_ci_max));
-text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min, totalCars_ci_max));
-text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min, totalCars_ci_max));
-text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min, totalCars_ci_max));
+text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min1, totalCars_ci_max1));
+text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min2, totalCars_ci_max2));
+text16.setText(calculateCI(totalCarsCollect_WestIL, totalCars_mean3, totalCars_ci_min3, totalCars_ci_max3));
+text17.setText(calculateCI(totalCarsCollect_WestOL, totalCars_mean4, totalCars_ci_min4, totalCars_ci_max4));
+text18.setText(calculateCI(totalCarsCollect_SouthIL, totalCars_mean5, totalCars_ci_min5, totalCars_ci_max5));
+text19.setText(calculateCI(totalCarsCollect_SouthOL, totalCars_mean6, totalCars_ci_min6, totalCars_ci_max6));
+text20.setText(calculateCI(totalCarsCollect_EastIL, totalCars_mean7, totalCars_ci_min7, totalCars_ci_max7));
+text21.setText(calculateCI(totalCarsCollect_EastOL, totalCars_mean8, totalCars_ci_min8, totalCars_ci_max8));
+text22.setText(calculateCI(totalCarsCollect_NorthIL, totalCars_mean9, totalCars_ci_min9, totalCars_ci_max9));
+text23.setText(calculateCI(totalCarsCollect_NorthOL, totalCars_mean10, totalCars_ci_min10, totalCars_ci_max10));
+text24.setText(calculateCI(totalCarsCollect_West, totalCars_mean11, totalCars_ci_min11, totalCars_ci_max11));
+text25.setText(calculateCI(totalCarsCollect_South, totalCars_mean12, totalCars_ci_min12, totalCars_ci_max12));
+text26.setText(calculateCI(totalCarsCollect_East, totalCars_mean13, totalCars_ci_min13, totalCars_ci_max13));
+text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_ci_min14, totalCars_ci_max14));
+text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
+text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min16, totalCars_ci_max16));
+text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min17, totalCars_ci_max17));
 ]]></AfterIterationCode>
 			<AllowParallelEvaluations>false</AllowParallelEvaluations>
 			<UseFreeformParameters>false</UseFreeformParameters>
@@ -39865,7 +39866,8 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[//2.262;	//df=9, n=10, alpha = 0,05
-1.984; 		//df = 100, n = 101, alpha = 0,025]]></Code>
+//1.984; 		//df = 100, n = 101, alpha = 0,05
+2.330;		//df =1000, n = 1001, alpha = 0,02]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -44908,23 +44910,23 @@ return ci_max;]]></Body>
 			<AfterIterationCode><![CDATA[/*
 // calculate c.i for totalNumberOfCars
 text7.setText(calculateCI(totalCarsCollect_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
-text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min, totalCars_ci_max));
-text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min, totalCars_ci_max));
-text16.setText(calculateCI(totalCarsCollect_WestIL, totalCars_mean3, totalCars_ci_min, totalCars_ci_max));
-text17.setText(calculateCI(totalCarsCollect_WestOL, totalCars_mean4, totalCars_ci_min, totalCars_ci_max));
-text18.setText(calculateCI(totalCarsCollect_SouthIL, totalCars_mean5, totalCars_ci_min, totalCars_ci_max));
-text19.setText(calculateCI(totalCarsCollect_SouthOL, totalCars_mean6, totalCars_ci_min, totalCars_ci_max));
-text20.setText(calculateCI(totalCarsCollect_EastIL, totalCars_mean7, totalCars_ci_min, totalCars_ci_max));
-text21.setText(calculateCI(totalCarsCollect_EastOL, totalCars_mean8, totalCars_ci_min, totalCars_ci_max));
-text22.setText(calculateCI(totalCarsCollect_NorthIL, totalCars_mean9, totalCars_ci_min, totalCars_ci_max));
-text23.setText(calculateCI(totalCarsCollect_NorthOL, totalCars_mean10, totalCars_ci_min, totalCars_ci_max));
-text24.setText(calculateCI(totalCarsCollect_West, totalCars_mean11, totalCars_ci_min, totalCars_ci_max));
-text25.setText(calculateCI(totalCarsCollect_South, totalCars_mean12, totalCars_ci_min, totalCars_ci_max));
-text26.setText(calculateCI(totalCarsCollect_East, totalCars_mean13, totalCars_ci_min, totalCars_ci_max));
-text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_ci_min, totalCars_ci_max));
-text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min, totalCars_ci_max));
-text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min, totalCars_ci_max));
-text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min, totalCars_ci_max));
+text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min1, totalCars_ci_max1));
+text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min2, totalCars_ci_max2));
+text16.setText(calculateCI(totalCarsCollect_WestIL, totalCars_mean3, totalCars_ci_min3, totalCars_ci_max3));
+text17.setText(calculateCI(totalCarsCollect_WestOL, totalCars_mean4, totalCars_ci_min4, totalCars_ci_max4));
+text18.setText(calculateCI(totalCarsCollect_SouthIL, totalCars_mean5, totalCars_ci_min5, totalCars_ci_max5));
+text19.setText(calculateCI(totalCarsCollect_SouthOL, totalCars_mean6, totalCars_ci_min6, totalCars_ci_max6));
+text20.setText(calculateCI(totalCarsCollect_EastIL, totalCars_mean7, totalCars_ci_min7, totalCars_ci_max7));
+text21.setText(calculateCI(totalCarsCollect_EastOL, totalCars_mean8, totalCars_ci_min8, totalCars_ci_max8));
+text22.setText(calculateCI(totalCarsCollect_NorthIL, totalCars_mean9, totalCars_ci_min9, totalCars_ci_max9));
+text23.setText(calculateCI(totalCarsCollect_NorthOL, totalCars_mean10, totalCars_ci_min10, totalCars_ci_max10));
+text24.setText(calculateCI(totalCarsCollect_West, totalCars_mean11, totalCars_ci_min11, totalCars_ci_max11));
+text25.setText(calculateCI(totalCarsCollect_South, totalCars_mean12, totalCars_ci_min12, totalCars_ci_max12));
+text26.setText(calculateCI(totalCarsCollect_East, totalCars_mean13, totalCars_ci_min13, totalCars_ci_max13));
+text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_ci_min14, totalCars_ci_max14));
+text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
+text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min16, totalCars_ci_max16));
+text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min17, totalCars_ci_max17));
 */
 
 // ---- system comparing -----
