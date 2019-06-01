@@ -36012,7 +36012,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 			<Name><![CDATA[Validation_morning_ciCompare]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>4096</MaximumMemory>
+			<MaximumMemory>16384</MaximumMemory>
 			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<AfterSimulationRunCode><![CDATA[// ---- collect data ----
@@ -39732,7 +39732,7 @@ text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_c
 			<ReplicationsProperties>
 				<UseReplication>true</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
-				<ReplicationPerIteration>101</ReplicationPerIteration>
+				<ReplicationPerIteration>1001</ReplicationPerIteration>
 				<MinimumReplication>2</MinimumReplication>
 				<MaximumReplication>10</MaximumReplication>
 				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>
@@ -39778,7 +39778,8 @@ totalCarsCollect_West.add(root.totalCars_West);
 totalCarsCollect_South.add(root.totalCars_South);
 totalCarsCollect_East.add(root.totalCars_East);
 totalCarsCollect_North.add(root.totalCars_North);
-totalCarsCollect_innerNode.add(root.carsInnerNode_vis);
+//innerNode
+totalCarsCollect_innerNode.addAll(root.carsInnerNode_list);
 
 // ---- add values to dataset (total-cars-variables) ----
 totalCars_mean.add(getCurrentReplication(), root.totalCars_wholeNode);
@@ -39801,6 +39802,8 @@ totalCars_mean16.add(getCurrentReplication(), root.totalCars_SchOut);
 totalCars_mean17.add(getCurrentReplication(), root.totalCars_SchIn);
 
 
+
+
 // ---- calculate c.i. (queue lengths) ----
 text3.setText(calculateCI(queueCollect_WestOL, queueWestOL_mean, queueWestOL_ci_min, queueWestOL_ci_max));
 text6.setText(calculateCI(queueCollect_WestIL, queueWestIL_mean, queueWestIL_ci_min, queueWestIL_ci_max));
@@ -39810,7 +39813,8 @@ text9.setText(calculateCI(queueCollect_NorthOL, queueNorthOL_mean, queueNorthOL_
 text8.setText(calculateCI(queueCollect_NorthIL, queueNorthIL_mean, queueNorthIL_ci_min, queueNorthIL_ci_max));
 text11.setText(calculateCI(queueCollect_SouthOL, queueSouthOL_mean, queueSouthOL_ci_min, queueSouthOL_ci_max));
 text10.setText(calculateCI(queueCollect_SouthIL, queueSouthIL_mean, queueSouthIL_ci_min, queueSouthIL_ci_max));
-
+//innerNode
+text28.setText(calculateCI(totalCarsCollect_innerNode,totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
 
 // ---- calculate difference between simulated and real worl data ----
 // queue lengths
@@ -44907,7 +44911,7 @@ return ci_max;]]></Body>
     			</Plot>
 			</Charts>
 
-			<AfterIterationCode><![CDATA[/*
+			<AfterIterationCode><![CDATA[
 // calculate c.i for totalNumberOfCars
 text7.setText(calculateCI(totalCarsCollect_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
 text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min1, totalCars_ci_max1));
@@ -44927,7 +44931,7 @@ text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_c
 text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
 text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min16, totalCars_ci_max16));
 text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min17, totalCars_ci_max17));
-*/
+
 
 // ---- system comparing -----
 // queue lengths
