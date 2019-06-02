@@ -3736,7 +3736,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Connector>
 					<Id>1557746432384</Id>
 					<Name><![CDATA[connector83]]></Name>
-					<X>222</X><Y>1825</Y>
+					<X>292</X><Y>1825</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3744,7 +3744,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[simmodel_morning]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveTo1]]></ItemName>
+						<ItemName><![CDATA[carToSch]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -3763,7 +3763,9 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-1</X><Y>-42</Y></Point>
+						<Point><X>-30</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
+						<Point><X>-71</X><Y>-42</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -3864,39 +3866,6 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-19</X><Y>479</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1557747132474</Id>
-					<Name><![CDATA[connector80]]></Name>
-					<X>292</X><Y>1825</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carToSch]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveTo1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -12669,9 +12638,17 @@ totalCars_North += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[70]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[2.5]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
@@ -13212,9 +13189,17 @@ totalCars_West += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[70]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[2.5]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
@@ -14314,6 +14299,10 @@ totalCars_North += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[3]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
@@ -14491,6 +14480,10 @@ totalCars_West += 1;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[3]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
@@ -22661,14 +22654,14 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExitTrue]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[stopLine20.setSignal(SIGNAL_GREEN);]]></Code>
+								<Code><![CDATA[//stopLine20.setSignal(SIGNAL_GREEN);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[if (AreaShS1.size() == 0 && AreaShN2.size() == 0 && Schiller1.size() == 0){
-	stopLine20.setSignal(SIGNAL_GREEN);
+	//stopLine20.setSignal(SIGNAL_GREEN);
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -22758,111 +22751,6 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[stopLineBehavior]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWayNotFound]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1557746429847</Id>
-					<Name><![CDATA[carMoveTo1]]></Name>
-					<X>222.6</X><Y>1815.6</Y>
-					<Label><X>-19</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-							<ClassName><![CDATA[CarMoveTo]]></ClassName>
-							<ItemName><![CDATA[1431084833294]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[movesTo]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.STOP_LINE]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[road]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[roadSh]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destination]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.END_OF_BACKWARD_LANE]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[parkingLot]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[stopLine]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[stopLine20]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[busStop]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[stopLineBehavior]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.STOP_BEFORE_STOP_LINE]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
@@ -25827,7 +25715,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[stopLine11.setSignal(SIGNAL_RED);
-stopLine20.setSignal(SIGNAL_RED);]]></Code>
+//stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -26042,14 +25930,14 @@ stopLine20.setSignal(SIGNAL_RED);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[stopLine20.setSignal(SIGNAL_RED);]]></Code>
+								<Code><![CDATA[//stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[if (self.size() == 0 && AreaShS1.size() == 0){
-	stopLine20.setSignal(SIGNAL_GREEN);
+	//stopLine20.setSignal(SIGNAL_GREEN);
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -28033,7 +27921,7 @@ stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[stopLine11.setSignal(SIGNAL_RED);
-stopLine20.setSignal(SIGNAL_RED);]]></Code>
+//stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28041,7 +27929,7 @@ stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[if (self.size() == 0 && AreaShS.size() == 0)
 {
-	stopLine20.setSignal(SIGNAL_GREEN);
+	//stopLine20.setSignal(SIGNAL_GREEN);
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -28999,14 +28887,14 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[stopLine20.setSignal(SIGNAL_RED);]]></Code>
+								<Code><![CDATA[//stopLine20.setSignal(SIGNAL_RED);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[if (self.size() == 0 && AreaShN2.size() == 0){
-	stopLine20.setSignal(SIGNAL_GREEN);
+	//stopLine20.setSignal(SIGNAL_GREEN);
 }]]></Code>
 							</Value>
 						</Parameter>
@@ -30887,13 +30775,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1556012023339</Id>
 					<Name><![CDATA[stopLine2]]></Name>
-					<X>856.677</X><Y>553.284</Y>
+					<X>849.932</X><Y>553.352</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>724.499</Offset>
+					<Offset>721.756</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -31003,13 +30891,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558279028417</Id>
 					<Name><![CDATA[stopLine28]]></Name>
-					<X>891.146</X><Y>550.909</Y>
+					<X>852.629</X><Y>553.287</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>759.05</Offset>
+					<Offset>724.451</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -31028,13 +30916,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558279056557</Id>
 					<Name><![CDATA[stopLine29]]></Name>
-					<X>891.146</X><Y>550.909</Y>
+					<X>852.064</X><Y>553.326</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>759.05</Offset>
+					<Offset>723.885</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>1</RightLane>
@@ -31175,13 +31063,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558003747460</Id>
 					<Name><![CDATA[stopLine24]]></Name>
-					<X>1062.469</X><Y>470.275</Y>
+					<X>1094.598</X><Y>472.618</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>782.711</Offset>
+					<Offset>747.365</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>1</RightLane>
@@ -31200,13 +31088,13 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1558040586976</Id>
 					<Name><![CDATA[stopLine25]]></Name>
-					<X>1062.656</X><Y>470.246</Y>
+					<X>1096.126</X><Y>480.257</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>782.521</Offset>
+					<Offset>747.022</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>1</LeftLane>
 					<RightLane>0</RightLane>
@@ -31973,6 +31861,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<RoadStopline>
 					<Id>1557747097604</Id>
 					<Name><![CDATA[stopLine20]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>1037.56</X><Y>705.787</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -36075,7 +35964,8 @@ text10.setText(calculateCI(queueCollect_SouthIL, queueSouthIL_mean, queueSouthIL
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[//2.262;	//df=9, n=10, alpha = 0,05
 //1.984; 		//df = 100, n = 101, alpha = 0,05
-2.330;		//df =1000, n = 1001, alpha = 0,02]]></Code>
+//2.330;		//df =1000, n = 1001, alpha = 0,02
+1.962;]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -39732,7 +39622,7 @@ text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_c
 			<ReplicationsProperties>
 				<UseReplication>true</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
-				<ReplicationPerIteration>1001</ReplicationPerIteration>
+				<ReplicationPerIteration>50</ReplicationPerIteration>
 				<MinimumReplication>2</MinimumReplication>
 				<MaximumReplication>10</MaximumReplication>
 				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>
