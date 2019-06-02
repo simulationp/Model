@@ -13183,7 +13183,7 @@ totalCars_West += 1;]]></Code>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[10]]></Code>
+								<Code><![CDATA[40]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
 							</Value>
 						</Parameter>
@@ -14471,7 +14471,7 @@ totalCars_West += 1;]]></Code>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[10]]></Code>
+								<Code><![CDATA[40]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
 							</Value>
 						</Parameter>
@@ -30715,28 +30715,6 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
 					<CustomPoints>true</CustomPoints>
-				</LaneConnector>
-
-				<LaneConnector SourceId="1556012043168" TargetId="1556012043168">
-					<Id>1559160796833</Id>
-					<Name><![CDATA[laneConnector6]]></Name>
-					<X>1058.9185375457241</X><Y>487.464894517082</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-110.11853754572417</X><Y>16.535105482918027</Y></Point>
-						<Point><X>-9.882437080965019</X><Y>1.528867993244262</Y></Point>
-						<Point><X>5.886141773990403</X><Y>38.04738276171548</Y></Point>
-						<Point><X>-3.9962953069746163</X><Y>39.576250754959744</Y></Point>
-						<Point><X>-110.11853754572417</X><Y>16.535105482918027</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
 				</LaneConnector>
 
 			</Shapes>
