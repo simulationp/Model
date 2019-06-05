@@ -529,7 +529,6 @@ if (currentPhaseIndex == 1 && time(SECOND) >= STEADY_STATE_TIME) {
 }
 
 
-//TODO same for every lane
 //NORTH
 if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 	int queueOL = 0;
@@ -688,7 +687,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559071271805</Id>
 					<Name><![CDATA[carsInnerNode_vis]]></Name>
-					<X>1190</X><Y>1820</Y>
+					<X>1230</X><Y>1840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -700,7 +699,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559071423942</Id>
 					<Name><![CDATA[totalBusses_wholeNode]]></Name>
-					<X>1190</X><Y>1300</Y>
+					<X>1230</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -724,7 +723,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559072176525</Id>
 					<Name><![CDATA[totalCars_WestOL]]></Name>
-					<X>1190</X><Y>1410</Y>
+					<X>1230</X><Y>1410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -748,7 +747,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559072176533</Id>
 					<Name><![CDATA[totalCars_SouthOL]]></Name>
-					<X>1190</X><Y>1450</Y>
+					<X>1230</X><Y>1450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -772,7 +771,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559072176541</Id>
 					<Name><![CDATA[totalCars_EastOL]]></Name>
-					<X>1190</X><Y>1490</Y>
+					<X>1230</X><Y>1490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -796,7 +795,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559072176549</Id>
 					<Name><![CDATA[totalCars_NorthOL]]></Name>
-					<X>1190</X><Y>1530</Y>
+					<X>1230</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -820,7 +819,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559072176556</Id>
 					<Name><![CDATA[totalCars_SchIn]]></Name>
-					<X>1190</X><Y>1570</Y>
+					<X>1230</X><Y>1570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -844,7 +843,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559073547777</Id>
 					<Name><![CDATA[totalCars_South]]></Name>
-					<X>1190</X><Y>1630</Y>
+					<X>1230</X><Y>1630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -868,7 +867,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559073547785</Id>
 					<Name><![CDATA[totalCars_North]]></Name>
-					<X>1190</X><Y>1670</Y>
+					<X>1230</X><Y>1670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -892,7 +891,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143531065</Id>
 					<Name><![CDATA[queueLength_EastOL_vis]]></Name>
-					<X>1020</X><Y>1960</Y>
+					<X>1060</X><Y>2120</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -904,7 +903,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143550157</Id>
 					<Name><![CDATA[roadEastOL]]></Name>
-					<X>890</X><Y>1960</Y>
+					<X>920</X><Y>2120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -919,7 +918,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143550163</Id>
 					<Name><![CDATA[roadEastIL]]></Name>
-					<X>890</X><Y>1990</Y>
+					<X>920</X><Y>2150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -934,7 +933,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143627608</Id>
 					<Name><![CDATA[queueLength_EastIL_vis]]></Name>
-					<X>1020</X><Y>1990</Y>
+					<X>1060</X><Y>2150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -946,7 +945,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143655224</Id>
 					<Name><![CDATA[queueLength_NorthOL_vis]]></Name>
-					<X>1020</X><Y>2090</Y>
+					<X>1060</X><Y>2260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -958,7 +957,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143655227</Id>
 					<Name><![CDATA[roadNorthOL]]></Name>
-					<X>890</X><Y>2090</Y>
+					<X>920</X><Y>2260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -973,7 +972,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143655230</Id>
 					<Name><![CDATA[queueLength_NorthIL_vis]]></Name>
-					<X>1020</X><Y>2120</Y>
+					<X>1060</X><Y>2290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -985,7 +984,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143655233</Id>
 					<Name><![CDATA[roadNorthIL]]></Name>
-					<X>890</X><Y>2120</Y>
+					<X>920</X><Y>2290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1000,7 +999,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143730008</Id>
 					<Name><![CDATA[queueLength_SouthOL_vis]]></Name>
-					<X>1020</X><Y>2160</Y>
+					<X>1060</X><Y>2330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1012,7 +1011,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143730010</Id>
 					<Name><![CDATA[roadSouthOL]]></Name>
-					<X>890</X><Y>2160</Y>
+					<X>920</X><Y>2330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1027,7 +1026,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143730013</Id>
 					<Name><![CDATA[queueLength_SouthIL_vis]]></Name>
-					<X>1020</X><Y>2190</Y>
+					<X>1060</X><Y>2360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1039,7 +1038,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559143730015</Id>
 					<Name><![CDATA[roadSouthIL]]></Name>
-					<X>890</X><Y>2190</Y>
+					<X>920</X><Y>2360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1054,7 +1053,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559144161106</Id>
 					<Name><![CDATA[queueLength_WestOL_vis]]></Name>
-					<X>1020</X><Y>2020</Y>
+					<X>1060</X><Y>2190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1066,7 +1065,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559144161109</Id>
 					<Name><![CDATA[roadWestOL]]></Name>
-					<X>890</X><Y>2020</Y>
+					<X>920</X><Y>2190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1081,7 +1080,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559144161112</Id>
 					<Name><![CDATA[queueLength_WestIL_vis]]></Name>
-					<X>1020</X><Y>2050</Y>
+					<X>1060</X><Y>2220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1093,7 +1092,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="PlainVariable">
 					<Id>1559144161115</Id>
 					<Name><![CDATA[roadWestIL]]></Name>
-					<X>890</X><Y>2050</Y>
+					<X>920</X><Y>2220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1123,7 +1122,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="AuxVariable">
 					<Id>1559070143140</Id>
 					<Name><![CDATA[TimeInMinutes]]></Name>
-					<X>1260</X><Y>1050</Y>
+					<X>1280</X><Y>1050</Y>
 					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1138,7 +1137,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="Parameter">
 					<Id>1559076872548</Id>
 					<Name><![CDATA[SPEED_THRESHOLD]]></Name>
-					<X>1040</X><Y>1910</Y>
+					<X>1080</X><Y>2070</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1162,7 +1161,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="Parameter">
 					<Id>1559076925162</Id>
 					<Name><![CDATA[STEADY_STATE_TIME]]></Name>
-					<X>1160</X><Y>1260</Y>
+					<X>1190</X><Y>1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1186,7 +1185,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559071271790</Id>
 					<Name><![CDATA[carsInnerNode_list]]></Name>
-					<X>1190</X><Y>1790</Y>
+					<X>1230</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1201,7 +1200,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143588924</Id>
 					<Name><![CDATA[queueLength_EastOL_list]]></Name>
-					<X>1200</X><Y>1960</Y>
+					<X>1310</X><Y>2120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1216,7 +1215,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143588960</Id>
 					<Name><![CDATA[queueLength_EastIL_list]]></Name>
-					<X>1200</X><Y>1990</Y>
+					<X>1310</X><Y>2150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1231,7 +1230,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143655201</Id>
 					<Name><![CDATA[queueLength_NorthOL_list]]></Name>
-					<X>1190</X><Y>2090</Y>
+					<X>1310</X><Y>2260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1246,7 +1245,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143655214</Id>
 					<Name><![CDATA[queueLength_NorthIL_list]]></Name>
-					<X>1190</X><Y>2120</Y>
+					<X>1310</X><Y>2290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1261,7 +1260,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143729990</Id>
 					<Name><![CDATA[queueLength_SouthOL_list]]></Name>
-					<X>1190</X><Y>2160</Y>
+					<X>1310</X><Y>2330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1276,7 +1275,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559143729997</Id>
 					<Name><![CDATA[queueLength_SouthIL_list]]></Name>
-					<X>1190</X><Y>2190</Y>
+					<X>1310</X><Y>2360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1291,7 +1290,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559144161097</Id>
 					<Name><![CDATA[queueLength_WestOL_list]]></Name>
-					<X>1190</X><Y>2020</Y>
+					<X>1310</X><Y>2190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1306,7 +1305,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Variable Class="CollectionVariable">
 					<Id>1559144161101</Id>
 					<Name><![CDATA[queueLength_WestIL_list]]></Name>
-					<X>1190</X><Y>2050</Y>
+					<X>1310</X><Y>2220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1384,39 +1383,6 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>74</X><Y>-57</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1556013841873</Id>
-					<Name><![CDATA[connector]]></Name>
-					<X>289.333</X><Y>1030</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveToE]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carDispose]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarDispose]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>43</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1582,39 +1548,6 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>62</X><Y>-18</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1556658045717</Id>
-					<Name><![CDATA[connector4]]></Name>
-					<X>209.333</X><Y>1030</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput]]></ClassName>
-						<ItemName><![CDATA[outT]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[simmodel_morning]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveToE]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4067,7 +4000,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Connector>
 					<Id>1557748872288</Id>
 					<Name><![CDATA[connector89]]></Name>
-					<X>841.334</X><Y>2229</Y>
+					<X>820.334</X><Y>2229</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4094,7 +4027,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-89</X><Y>-98</Y></Point>
+						<Point><X>-69</X><Y>-98</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4232,7 +4165,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Connector>
 					<Id>1557750038370</Id>
 					<Name><![CDATA[connector94]]></Name>
-					<X>753.334</X><Y>2191</Y>
+					<X>752.334</X><Y>2191</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4259,7 +4192,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>88</X><Y>38</Y></Point>
+						<Point><X>68</X><Y>38</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4424,7 +4357,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>87</X><Y>-10</Y></Point>
+						<Point><X>66</X><Y>-10</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4589,7 +4522,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>90</X><Y>-56</Y></Point>
+						<Point><X>69</X><Y>-56</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4991,7 +4924,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Connector>
 					<Id>1557835165837</Id>
 					<Name><![CDATA[connector116]]></Name>
-					<X>715.334</X><Y>2334</Y>
+					<X>714.334</X><Y>2334</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5018,8 +4951,8 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>65</X><Y>-20</Y></Point>
-						<Point><X>126</X><Y>-105</Y></Point>
+						<Point><X>66</X><Y>-20</Y></Point>
+						<Point><X>106</X><Y>-105</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -5430,6 +5363,138 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 						<Point><X>-104</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1559656046607</Id>
+					<Name><![CDATA[connector4]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput]]></ClassName>
+						<ItemName><![CDATA[outT]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[timeMeasureStart]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>209</X><Y>1030</Y></Point>
+						<Point><X>210</X><Y>1030</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1559656046615</Id>
+					<Name><![CDATA[connector124]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[timeMeasureStart]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveToE]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>220</X><Y>1030</Y></Point>
+						<Point><X>249</X><Y>1030</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1559656057384</Id>
+					<Name><![CDATA[connector]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveToE]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[timeMeasureEnd]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>289</X><Y>1030</Y></Point>
+						<Point><X>340</X><Y>1060</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1559656057386</Id>
+					<Name><![CDATA[connector125]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[timeMeasureEnd]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[simmodel_morning]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>350</X><Y>1060</Y></Point>
+						<Point><X>367</X><Y>1073</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Events>
 				<Event>
@@ -5466,7 +5531,7 @@ if (currentPhaseIndex == 12 && time(SECOND) >= STEADY_STATE_TIME) {
 				<Event>
 					<Id>1559071271811</Id>
 					<Name><![CDATA[getCarsInnerNode]]></Name>
-					<X>1020</X><Y>1790</Y>
+					<X>1020</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5499,7 +5564,7 @@ carsInnerNode_vis = n;]]></Action>
 				<Event>
 					<Id>1559071614692</Id>
 					<Name><![CDATA[restartCollectingForSteadyState]]></Name>
-					<X>940</X><Y>1260</Y>
+					<X>900</X><Y>1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5616,7 +5681,7 @@ return X;]]></Body>
 					<ReturnType><![CDATA[Agent]]></ReturnType>
 					<Id>1558565352656</Id>
 					<Name><![CDATA[agentSouthOL]]></Name>
-					<X>-108</X><Y>1003</Y>
+					<X>-138</X><Y>1003</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5630,7 +5695,7 @@ else {return new Truck();}]]></Body>
 					<ReturnType><![CDATA[Agent]]></ReturnType>
 					<Id>1558565873352</Id>
 					<Name><![CDATA[agentSouthIL]]></Name>
-					<X>-108</X><Y>1103</Y>
+					<X>-138</X><Y>1103</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7109,7 +7174,7 @@ else {return new Truck();} ]]></Body>
 				<CustomDistribution>
 					<Id>1558102768408</Id>
 					<Name><![CDATA[customS]]></Name>
-					<X>-77.2</X><Y>1029</Y>
+					<X>-107.2</X><Y>1029</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7856,7 +7921,7 @@ else {return new Truck();} ]]></Body>
 				<CustomDistribution>
 					<Id>1558102815901</Id>
 					<Name><![CDATA[customS2]]></Name>
-					<X>-80.4</X><Y>1129</Y>
+					<X>-110.4</X><Y>1129</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23799,7 +23864,7 @@ stopLine17.setSignal(SIGNAL_RED);]]></Code>
 				<EmbeddedObject>
 					<Id>1557748870497</Id>
 					<Name><![CDATA[pedSink]]></Name>
-					<X>841.334</X><Y>2229.6</Y>
+					<X>821.334</X><Y>2229.6</Y>
 					<Label><X>-25</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -30394,6 +30459,144 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1559656043286</Id>
+					<Name><![CDATA[timeMeasureStart]]></Name>
+					<X>210</X><Y>1010</Y>
+					<Label><X>-70</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+							<ItemName><![CDATA[1412336243204]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1559656055369</Id>
+					<Name><![CDATA[timeMeasureEnd]]></Name>
+					<X>320</X><Y>1040</Y>
+					<Label><X>-55</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+							<ItemName><![CDATA[1412336243203]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[startObjects]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[{ timeMeasureStart }]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[datasetCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1000]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Shapes>
@@ -34041,7 +34244,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>230</Width>
+					<Width>270</Width>
 					<Height>130</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
@@ -34093,7 +34296,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<Text>
 					<Id>1559073915159</Id>
 					<Name><![CDATA[text18]]></Name>
-					<X>880</X><Y>1900</Y>
+					<X>920</X><Y>2060</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34135,7 +34338,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 				<Text>
 					<Id>1559073971693</Id>
 					<Name><![CDATA[text21]]></Name>
-					<X>890</X><Y>1770</Y>
+					<X>890</X><Y>1790</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34237,7 +34440,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559071271780</Id>
 					<Name><![CDATA[plot1]]></Name>
-					<X>1370</X><Y>1720</Y>
+					<X>1460</X><Y>1790</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34302,7 +34505,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559074610833</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>1370</X><Y>1410</Y>
+					<X>1440</X><Y>1410</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34448,7 +34651,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559074610853</Id>
 					<Name><![CDATA[plot2]]></Name>
-					<X>1370</X><Y>1910</Y>
+					<X>1540</X><Y>2080</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34522,7 +34725,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559074610865</Id>
 					<Name><![CDATA[plot3]]></Name>
-					<X>1660</X><Y>1410</Y>
+					<X>1730</X><Y>1410</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34614,7 +34817,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559074924934</Id>
 					<Name><![CDATA[plot4]]></Name>
-					<X>1370</X><Y>1220</Y>
+					<X>1440</X><Y>1220</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34697,7 +34900,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559162658256</Id>
 					<Name><![CDATA[plot6]]></Name>
-					<X>1390</X><Y>2110</Y>
+					<X>1540</X><Y>2280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34771,7 +34974,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559162970956</Id>
 					<Name><![CDATA[plot7]]></Name>
-					<X>1380</X><Y>2320</Y>
+					<X>1540</X><Y>2490</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34845,7 +35048,7 @@ stopLine15.setSignal(SIGNAL_GREEN);}
     			<TimePlot>
 					<Id>1559162974510</Id>
 					<Name><![CDATA[plot8]]></Name>
-					<X>1360</X><Y>2510</Y>
+					<X>1520</X><Y>2710</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -34916,6 +35119,68 @@ stopLine15.setSignal(SIGNAL_GREEN);}
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
+    			<Histogram>
+					<Id>1559656155865</Id>
+					<Name><![CDATA[chart]]></Name>
+					<X>-290</X><Y>770</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559721600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>false</ShowCDF>
+					<ShowMean>false</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[timeMeasureEnd.distribution]]></Expression>
+						<ColorPDF>-13447886</ColorPDF>
+						<ColorCDF>-9404272</ColorCDF>
+						<ColorLowPercent>-23296</ColorLowPercent>
+						<ColorHighPercent>-4343957</ColorHighPercent>
+						<ColorMean>-7667573</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[distribution]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
 			</Charts>
 
 		</ActiveObjectClass>
@@ -39778,7 +40043,10 @@ totalCarsCollect_West.add(root.totalCars_West);
 totalCarsCollect_South.add(root.totalCars_South);
 totalCarsCollect_East.add(root.totalCars_East);
 totalCarsCollect_North.add(root.totalCars_North);
-totalCarsCollect_innerNode.add(root.carsInnerNode_vis);
+
+//inner node
+totalCarsCollect_innerNode.addAll(root.carsInnerNode_list);
+
 
 // ---- add values to dataset (total-cars-variables) ----
 totalCars_mean.add(getCurrentReplication(), root.totalCars_wholeNode);
@@ -39796,12 +40064,12 @@ totalCars_mean11.add(getCurrentReplication(), root.totalCars_West);
 totalCars_mean12.add(getCurrentReplication(), root.totalCars_South);
 totalCars_mean13.add(getCurrentReplication(), root.totalCars_East);
 totalCars_mean14.add(getCurrentReplication(), root.totalCars_North);
-totalCars_mean15.add(getCurrentReplication(), root.carsInnerNode_vis);
 totalCars_mean16.add(getCurrentReplication(), root.totalCars_SchOut);
 totalCars_mean17.add(getCurrentReplication(), root.totalCars_SchIn);
 
 
-// ---- calculate c.i. (queue lengths) ----
+// ---- calculate c.i. -----
+// queue lengths
 text3.setText(calculateCI(queueCollect_WestOL, queueWestOL_mean, queueWestOL_ci_min, queueWestOL_ci_max));
 text6.setText(calculateCI(queueCollect_WestIL, queueWestIL_mean, queueWestIL_ci_min, queueWestIL_ci_max));
 text13.setText(calculateCI(queueCollect_EastOL, queueEastOL_mean, queueEastOL_ci_min, queueEastOL_ci_max));
@@ -39810,6 +40078,10 @@ text9.setText(calculateCI(queueCollect_NorthOL, queueNorthOL_mean, queueNorthOL_
 text8.setText(calculateCI(queueCollect_NorthIL, queueNorthIL_mean, queueNorthIL_ci_min, queueNorthIL_ci_max));
 text11.setText(calculateCI(queueCollect_SouthOL, queueSouthOL_mean, queueSouthOL_ci_min, queueSouthOL_ci_max));
 text10.setText(calculateCI(queueCollect_SouthIL, queueSouthIL_mean, queueSouthIL_ci_min, queueSouthIL_ci_max));
+
+// inner node
+text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
+
 
 
 // ---- calculate difference between simulated and real worl data ----
@@ -39823,7 +40095,7 @@ collectDiff_queueSouthIL.add(calcDiff(2.67, queueSouthIL_mean));
 collectDiff_queueNorthOL.add(calcDiff(2.86, queueNorthOL_mean));
 collectDiff_queueNorthIL.add(calcDiff(1.81, queueNorthIL_mean));
 
-// totals cars
+// total cars
 collectDiff_totalCarsWholeNode.add(calcDiff(1891.5, totalCars_mean));
 collectDiff_totalCarsWestOL.add(calcDiff(526.5, totalCars_mean4));
 collectDiff_totalCarsWestIL.add(calcDiff(220.5, totalCars_mean3));
@@ -39833,8 +40105,8 @@ collectDiff_totalCarsSouthOL.add(calcDiff(238, totalCars_mean6));
 collectDiff_totalCarsSouthIL.add(calcDiff(45, totalCars_mean5));
 collectDiff_totalCarsNorthOL.add(calcDiff(117.5, totalCars_mean10));
 collectDiff_totalCarsNorthIL.add(calcDiff(66.5, totalCars_mean9));
-// collectDiff_totalCarsSchOut.add(calcDiff(2.66, totalCars_mean16));
-// collectDiff_totalCarsSchIn.add(calcDiff(2.86, totalCars_mean17));
+collectDiff_totalCarsSchOut.add(calcDiff(2.66, totalCars_mean16));
+collectDiff_totalCarsSchIn.add(calcDiff(2.86, totalCars_mean17));
 
 //inner node
 collectDiff_totalCarsInnerNode.add(calcDiff(3.615, totalCars_mean15));
@@ -39848,7 +40120,8 @@ queueCollect_EastIL.clear();
 queueCollect_SouthOL.clear();
 queueCollect_SouthIL.clear();
 queueCollect_NorthOL.clear();
-queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
+queueCollect_NorthIL.clear();
+]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
@@ -39874,7 +40147,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967403</Id>
 					<Name><![CDATA[queueCollect_WestOL]]></Name>
-					<X>65</X><Y>210</Y>
+					<X>55</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39889,7 +40162,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967405</Id>
 					<Name><![CDATA[queueCollect_WestIL]]></Name>
-					<X>67</X><Y>245</Y>
+					<X>57</X><Y>265</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39904,7 +40177,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967407</Id>
 					<Name><![CDATA[queueCollect_EastOL]]></Name>
-					<X>67</X><Y>315</Y>
+					<X>57</X><Y>315</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39919,7 +40192,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967409</Id>
 					<Name><![CDATA[queueCollect_EastIL]]></Name>
-					<X>67</X><Y>355</Y>
+					<X>57</X><Y>355</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39934,7 +40207,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967411</Id>
 					<Name><![CDATA[queueCollect_SouthOL]]></Name>
-					<X>67</X><Y>395</Y>
+					<X>57</X><Y>395</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39949,7 +40222,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967413</Id>
 					<Name><![CDATA[queueCollect_SouthIL]]></Name>
-					<X>67</X><Y>435</Y>
+					<X>57</X><Y>435</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39964,7 +40237,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967415</Id>
 					<Name><![CDATA[queueCollect_NorthOL]]></Name>
-					<X>67</X><Y>471</Y>
+					<X>57</X><Y>471</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -39979,7 +40252,7 @@ queueCollect_NorthIL.clear();]]></AfterSimulationRunCode>
 				<Variable Class="CollectionVariable">
 					<Id>1559082967417</Id>
 					<Name><![CDATA[queueCollect_NorthIL]]></Name>
-					<X>67</X><Y>511</Y>
+					<X>57</X><Y>511</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40696,6 +40969,7 @@ return ci_max;]]></Body>
 						<Type><![CDATA[DataSet]]></Type>
 					</Parameter>
 					<Body><![CDATA[double Y1 = ds_mean.getY(getCurrentReplication()-1);
+System.out.println(Y1);
 double D_r = Y1-Y2;
 return D_r;
 ]]></Body>
@@ -40809,7 +41083,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967374</Id>
 					<Name><![CDATA[queueWestOL_ci_min]]></Name>
-					<X>580</X><Y>210</Y>
+					<X>580</X><Y>230</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40831,7 +41105,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967377</Id>
 					<Name><![CDATA[queueWestOL_ci_max]]></Name>
-					<X>770</X><Y>210</Y>
+					<X>790</X><Y>230</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40853,7 +41127,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967380</Id>
 					<Name><![CDATA[queueWestOL_mean]]></Name>
-					<X>410</X><Y>210</Y>
+					<X>370</X><Y>230</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40875,7 +41149,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967383</Id>
 					<Name><![CDATA[queueWestIL_ci_min]]></Name>
-					<X>580</X><Y>240</Y>
+					<X>580</X><Y>260</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40897,7 +41171,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967386</Id>
 					<Name><![CDATA[queueWestIL_ci_max]]></Name>
-					<X>770</X><Y>240</Y>
+					<X>790</X><Y>260</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -40919,7 +41193,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559082967389</Id>
 					<Name><![CDATA[queueWestIL_mean]]></Name>
-					<X>410</X><Y>240</Y>
+					<X>370</X><Y>260</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41007,7 +41281,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306167830</Id>
 					<Name><![CDATA[queueEastIL_mean]]></Name>
-					<X>410</X><Y>350</Y>
+					<X>370</X><Y>350</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41029,7 +41303,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306178806</Id>
 					<Name><![CDATA[queueEastOL_mean]]></Name>
-					<X>410</X><Y>300</Y>
+					<X>370</X><Y>300</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41051,7 +41325,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306183942</Id>
 					<Name><![CDATA[queueSouthOL_mean]]></Name>
-					<X>410</X><Y>390</Y>
+					<X>370</X><Y>390</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41073,7 +41347,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306185908</Id>
 					<Name><![CDATA[queueSouthIL_mean]]></Name>
-					<X>410</X><Y>430</Y>
+					<X>370</X><Y>430</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41095,7 +41369,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306188113</Id>
 					<Name><![CDATA[queueNorthOL_mean]]></Name>
-					<X>410</X><Y>470</Y>
+					<X>370</X><Y>470</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41117,7 +41391,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306188820</Id>
 					<Name><![CDATA[queueNorthIL_mean]]></Name>
-					<X>410</X><Y>510</Y>
+					<X>370</X><Y>510</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41271,7 +41545,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306236012</Id>
 					<Name><![CDATA[queueEastOL_ci_max]]></Name>
-					<X>780</X><Y>300</Y>
+					<X>790</X><Y>300</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41293,7 +41567,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306236483</Id>
 					<Name><![CDATA[queueEastIL_ci_max]]></Name>
-					<X>780</X><Y>350</Y>
+					<X>790</X><Y>350</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41315,7 +41589,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306237023</Id>
 					<Name><![CDATA[queueSouthOL_ci_max]]></Name>
-					<X>780</X><Y>390</Y>
+					<X>790</X><Y>390</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41337,7 +41611,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306237547</Id>
 					<Name><![CDATA[queueSouthIL_ci_max]]></Name>
-					<X>780</X><Y>430</Y>
+					<X>790</X><Y>430</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41359,7 +41633,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306238097</Id>
 					<Name><![CDATA[queueNorthOL_ci_max]]></Name>
-					<X>780</X><Y>470</Y>
+					<X>790</X><Y>470</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -41381,7 +41655,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559306238595</Id>
 					<Name><![CDATA[queueNorthIL_ci_max]]></Name>
-					<X>780</X><Y>510</Y>
+					<X>790</X><Y>510</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42525,7 +42799,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559329459931</Id>
 					<Name><![CDATA[comparison_queueWestOL]]></Name>
-					<X>340</X><Y>1640</Y>
+					<X>380</X><Y>1640</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42547,7 +42821,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559329459941</Id>
 					<Name><![CDATA[comparison_queueWestIL]]></Name>
-					<X>340</X><Y>1670</Y>
+					<X>380</X><Y>1670</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42569,7 +42843,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332229537</Id>
 					<Name><![CDATA[comparison_queueEastOL]]></Name>
-					<X>340</X><Y>1720</Y>
+					<X>380</X><Y>1720</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42591,7 +42865,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332229553</Id>
 					<Name><![CDATA[comparison_queueEastIL]]></Name>
-					<X>340</X><Y>1750</Y>
+					<X>380</X><Y>1750</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42613,7 +42887,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332251633</Id>
 					<Name><![CDATA[comparison_queueSouthOL]]></Name>
-					<X>340</X><Y>1800</Y>
+					<X>380</X><Y>1800</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42635,7 +42909,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332251648</Id>
 					<Name><![CDATA[comparison_queueSouthIL]]></Name>
-					<X>340</X><Y>1830</Y>
+					<X>380</X><Y>1830</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42657,7 +42931,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332264761</Id>
 					<Name><![CDATA[comparison_queueNorthOL]]></Name>
-					<X>340</X><Y>1890</Y>
+					<X>380</X><Y>1890</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42679,7 +42953,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559332264791</Id>
 					<Name><![CDATA[comparison_queueNorthIL]]></Name>
-					<X>340</X><Y>1920</Y>
+					<X>380</X><Y>1920</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42701,7 +42975,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502279</Id>
 					<Name><![CDATA[comparison_totalCarsWestOL]]></Name>
-					<X>340</X><Y>2000</Y>
+					<X>380</X><Y>2000</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42723,7 +42997,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502312</Id>
 					<Name><![CDATA[comparison_totalCarsWestIL]]></Name>
-					<X>340</X><Y>2030</Y>
+					<X>380</X><Y>2030</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42745,7 +43019,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502348</Id>
 					<Name><![CDATA[comparison_totalCarsEastOL]]></Name>
-					<X>340</X><Y>2080</Y>
+					<X>380</X><Y>2080</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42767,7 +43041,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502380</Id>
 					<Name><![CDATA[comparison_totalCarsEastIL]]></Name>
-					<X>340</X><Y>2110</Y>
+					<X>380</X><Y>2110</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42789,7 +43063,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502412</Id>
 					<Name><![CDATA[comparison_totalCarsSouthOL]]></Name>
-					<X>340</X><Y>2160</Y>
+					<X>380</X><Y>2160</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42811,7 +43085,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502444</Id>
 					<Name><![CDATA[comparison_totalCarsSouthIL]]></Name>
-					<X>340</X><Y>2190</Y>
+					<X>380</X><Y>2190</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42833,7 +43107,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502477</Id>
 					<Name><![CDATA[comparison_totalCarsNorthOL]]></Name>
-					<X>340</X><Y>2250</Y>
+					<X>380</X><Y>2250</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42855,7 +43129,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376502509</Id>
 					<Name><![CDATA[comparison_totalCarsNorthIL]]></Name>
-					<X>340</X><Y>2280</Y>
+					<X>380</X><Y>2280</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42877,7 +43151,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376870842</Id>
 					<Name><![CDATA[comparison_totalCarsSchOut]]></Name>
-					<X>340</X><Y>2340</Y>
+					<X>380</X><Y>2340</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42899,7 +43173,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376870858</Id>
 					<Name><![CDATA[comparison_totalCarsSchIn]]></Name>
-					<X>340</X><Y>2370</Y>
+					<X>380</X><Y>2370</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42921,7 +43195,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559376870875</Id>
 					<Name><![CDATA[comparison_totalCarsInnerNode]]></Name>
-					<X>340</X><Y>2430</Y>
+					<X>380</X><Y>2430</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -42943,7 +43217,7 @@ return ci_max;]]></Body>
     			<DataSet>
 					<Id>1559377685407</Id>
 					<Name><![CDATA[comparison_totalCarsWholeNode]]></Name>
-					<X>340</X><Y>2480</Y>
+					<X>380</X><Y>2480</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43029,32 +43303,10 @@ return ci_max;]]></Body>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1559082967435</Id>
-					<Name><![CDATA[rectangle1]]></Name>
-					<X>40</X><Y>190</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>880</Width>
-					<Height>80</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1559082967437</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>230</X><Y>200</Y>
+					<X>260</X><Y>220</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43140,7 +43392,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559082967445</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>230</X><Y>230</Y>
+					<X>260</X><Y>250</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43665,7 +43917,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559329459862</Id>
 					<Name><![CDATA[text31]]></Name>
-					<X>620</X><Y>1630</Y>
+					<X>700</X><Y>1630</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43686,7 +43938,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559329459877</Id>
 					<Name><![CDATA[text32]]></Name>
-					<X>620</X><Y>1650</Y>
+					<X>700</X><Y>1650</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43707,7 +43959,7 @@ return ci_max;]]></Body>
 				<Rectangle>
 					<Id>1559329541246</Id>
 					<Name><![CDATA[rectangle2]]></Name>
-					<X>50</X><Y>1490</Y>
+					<X>50</X><Y>1500</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43721,7 +43973,7 @@ return ci_max;]]></Body>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>610</Width>
-					<Height>80</Height>
+					<Height>70</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -43729,7 +43981,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332229505</Id>
 					<Name><![CDATA[text35]]></Name>
-					<X>620</X><Y>1710</Y>
+					<X>700</X><Y>1710</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43750,7 +44002,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332229507</Id>
 					<Name><![CDATA[text36]]></Name>
-					<X>620</X><Y>1730</Y>
+					<X>700</X><Y>1730</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43771,7 +44023,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332251600</Id>
 					<Name><![CDATA[text37]]></Name>
-					<X>620</X><Y>1790</Y>
+					<X>700</X><Y>1790</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43792,7 +44044,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332251602</Id>
 					<Name><![CDATA[text38]]></Name>
-					<X>620</X><Y>1810</Y>
+					<X>700</X><Y>1810</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43813,7 +44065,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332264743</Id>
 					<Name><![CDATA[text39]]></Name>
-					<X>620</X><Y>1880</Y>
+					<X>700</X><Y>1880</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43834,7 +44086,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559332264745</Id>
 					<Name><![CDATA[text40]]></Name>
-					<X>620</X><Y>1900</Y>
+					<X>700</X><Y>1900</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43855,7 +44107,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376501948</Id>
 					<Name><![CDATA[text41]]></Name>
-					<X>620</X><Y>1990</Y>
+					<X>700</X><Y>1990</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43876,7 +44128,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376501994</Id>
 					<Name><![CDATA[text42]]></Name>
-					<X>620</X><Y>2010</Y>
+					<X>700</X><Y>2010</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43897,7 +44149,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502003</Id>
 					<Name><![CDATA[text43]]></Name>
-					<X>620</X><Y>2070</Y>
+					<X>700</X><Y>2070</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43918,7 +44170,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502011</Id>
 					<Name><![CDATA[text44]]></Name>
-					<X>620</X><Y>2090</Y>
+					<X>700</X><Y>2090</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43939,7 +44191,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502019</Id>
 					<Name><![CDATA[text45]]></Name>
-					<X>620</X><Y>2150</Y>
+					<X>700</X><Y>2150</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43960,7 +44212,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502026</Id>
 					<Name><![CDATA[text46]]></Name>
-					<X>620</X><Y>2170</Y>
+					<X>700</X><Y>2170</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -43981,7 +44233,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502034</Id>
 					<Name><![CDATA[text47]]></Name>
-					<X>620</X><Y>2240</Y>
+					<X>700</X><Y>2240</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44002,7 +44254,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376502042</Id>
 					<Name><![CDATA[text48]]></Name>
-					<X>620</X><Y>2260</Y>
+					<X>700</X><Y>2260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44023,7 +44275,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376870794</Id>
 					<Name><![CDATA[text49]]></Name>
-					<X>620</X><Y>2330</Y>
+					<X>700</X><Y>2330</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44044,7 +44296,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376870800</Id>
 					<Name><![CDATA[text50]]></Name>
-					<X>620</X><Y>2350</Y>
+					<X>700</X><Y>2350</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44065,7 +44317,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559376870803</Id>
 					<Name><![CDATA[text51]]></Name>
-					<X>620</X><Y>2420</Y>
+					<X>700</X><Y>2420</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44086,7 +44338,7 @@ return ci_max;]]></Body>
 				<Text>
 					<Id>1559377685395</Id>
 					<Name><![CDATA[text52]]></Name>
-					<X>620</X><Y>2470</Y>
+					<X>700</X><Y>2470</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44905,10 +45157,390 @@ return ci_max;]]></Body>
 					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
 					<HorScaleType>AUTO</HorScaleType>
     			</Plot>
+    			<Plot>
+					<Id>1559454908230</Id>
+					<Name><![CDATA[plot10]]></Name>
+					<X>764</X><Y>1794</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestOL]]></Title>
+					<Expression><![CDATA[comparison_queueWestOL]]></Expression>
+					<Color>-3137392</Color>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559454908264</Id>
+					<Name><![CDATA[plot11]]></Name>
+					<X>974</X><Y>1794</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestIL]]></Title>
+					<Expression><![CDATA[comparison_queueWestIL]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559454914563</Id>
+					<Name><![CDATA[plot12]]></Name>
+					<X>764</X><Y>2014</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestOL]]></Title>
+					<Expression><![CDATA[comparison_queueWestOL]]></Expression>
+					<Color>-3137392</Color>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559454914577</Id>
+					<Name><![CDATA[plot13]]></Name>
+					<X>974</X><Y>2014</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestIL]]></Title>
+					<Expression><![CDATA[comparison_queueWestIL]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559454918812</Id>
+					<Name><![CDATA[plot14]]></Name>
+					<X>764</X><Y>2274</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestOL]]></Title>
+					<Expression><![CDATA[comparison_queueWestOL]]></Expression>
+					<Color>-3137392</Color>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+    			<Plot>
+					<Id>1559454918820</Id>
+					<Name><![CDATA[plot15]]></Name>
+					<X>974</X><Y>2274</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1559376000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>false</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[comparison_queueWestIL]]></Title>
+					<Expression><![CDATA[comparison_queueWestIL]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
 			</Charts>
 
-			<AfterIterationCode><![CDATA[/*
-// calculate c.i for totalNumberOfCars
+			<AfterIterationCode><![CDATA[// calculate c.i for totalNumberOfCars
 text7.setText(calculateCI(totalCarsCollect_wholeNode, totalCars_mean, totalCars_ci_min, totalCars_ci_max));
 text14.setText(calculateCI(totalBussesCollect, totalCars_mean1, totalCars_ci_min1, totalCars_ci_max1));
 text15.setText(calculateCI(totalPedCyclCollect, totalCars_mean2, totalCars_ci_min2, totalCars_ci_max2));
@@ -44924,10 +45556,9 @@ text24.setText(calculateCI(totalCarsCollect_West, totalCars_mean11, totalCars_ci
 text25.setText(calculateCI(totalCarsCollect_South, totalCars_mean12, totalCars_ci_min12, totalCars_ci_max12));
 text26.setText(calculateCI(totalCarsCollect_East, totalCars_mean13, totalCars_ci_min13, totalCars_ci_max13));
 text27.setText(calculateCI(totalCarsCollect_North, totalCars_mean14, totalCars_ci_min14, totalCars_ci_max14));
-text28.setText(calculateCI(totalCarsCollect_innerNode, totalCars_mean15, totalCars_ci_min15, totalCars_ci_max15));
 text29.setText(calculateCI(totalCarsCollect_SchOut, totalCars_mean16, totalCars_ci_min16, totalCars_ci_max16));
 text30.setText(calculateCI(totalCarsCollect_SchIn, totalCars_mean17, totalCars_ci_min17, totalCars_ci_max17));
-*/
+
 
 // ---- system comparing -----
 // queue lengths
