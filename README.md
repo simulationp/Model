@@ -5,4 +5,4 @@ database is ignored (.gitignore)
 
 !! whenever pushing the model, the according database needs to be uploaded on google drive
 
-extra repositories for experiments: <>
+extra repository for experiments: https://github.com/ntraichel/SimProj_Experiments
